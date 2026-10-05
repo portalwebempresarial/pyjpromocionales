@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PyJ Promocionales | Catálogo Corporativo Completo</title>
+    <title>PyJ Promocionales | Catálogo Corporativo</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        /* Animación suave para el modal */
         @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
         .modal-animate { animation: fadeIn 0.3s ease-out forwards; }
     </style>
@@ -31,16 +29,16 @@
     <section class="flex flex-col items-center text-center p-8 md:p-20 bg-slate-900 text-white relative overflow-hidden border-b-4 border-[#FF6600]">
         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
         <div class="relative z-10">
-            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">Catálogo de Artículos que <br/><span class="text-[#FF6600]">Destacan tu Marca</span></h1>
-            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-slate-300">Audífonos, termos, libretas, morrales y cientos de artículos corporativos. Haz clic en cualquier artículo para conocer sus detalles y solicitar cotización.</p>
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">Artículos Promocionales que <br/><span class="text-[#FF6600]">Destacan tu Marca</span></h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-slate-300">Explora nuestras líneas de productos corporativos. Personalizamos cada detalle con calidad y cumplimiento garantizados.</p>
             <a href="#catalogo" class="inline-flex bg-[#FF6600] text-white font-bold py-3 px-8 rounded-full hover:bg-[#E65C00] transition-transform transform hover:scale-105 shadow-lg items-center gap-2">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-                Abrir Galería Completa
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                Ver Líneas de Producto
             </a>
         </div>
     </section>
 
-    <!-- Categorías Superiores de Navegación -->
+    <!-- Categorías Superiores -->
     <section class="py-12 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-slate-900">Encuentra el regalo ideal</h2>
@@ -58,39 +56,40 @@
                     <h3 class="font-bold text-slate-800">Oficina</h3>
                 </div>
                 <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer hover:border-[#FF6600]" onclick="filterCategory('Bolsas y Mochilas')">
-                    <img src="https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/LINEA.ECO.png" alt="Bolsas y Mochilas" class="h-12 w-auto mx-auto mb-3 object-contain">
+                    <img src="https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/LINEA.ECO.png" alt="Línea Eco" class="h-12 w-auto mx-auto mb-3 object-contain">
                     <h3 class="font-bold text-slate-800">Línea Eco</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- GALERÍA DINÁMICA (MOCKUPS AUTOMÁTICOS) -->
+    <!-- GALERÍA POR LÍNEAS DE PRODUCTO -->
     <section id="catalogo" class="max-w-7xl mx-auto p-6 md:py-16 scroll-mt-20 bg-gray-50">
-        <h2 class="text-2xl md:text-4xl font-bold text-center mb-4 text-slate-900">Catálogo General</h2>
-        <p class="text-center text-gray-500 mb-8 max-w-2xl mx-auto">Selecciona cualquier recuadro para ampliar las especificaciones del artículo.</p>
+        <h2 class="text-2xl md:text-4xl font-bold text-center mb-4 text-slate-900">Líneas de Producto</h2>
+        <p class="text-center text-gray-500 mb-8 max-w-2xl mx-auto">Selecciona la categoría de tu interés para conocer las opciones y solicitar el catálogo completo de esa línea.</p>
         
-        <!-- Barra de búsqueda y Filtros Horizontales -->
+        <!-- Filtros Horizontales -->
         <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-10">
             <div class="flex overflow-x-auto hide-scrollbar gap-2 w-full md:w-auto py-2" id="category-filters">
                 <button onclick="filterCategory('Todos')" class="cat-btn active whitespace-nowrap bg-[#FF6600] text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-colors shadow-sm">Ver Todo</button>
                 <button onclick="filterCategory('Oficina')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Oficina</button>
                 <button onclick="filterCategory('Tecnología')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Tecnología</button>
-                <button onclick="filterCategory('Mugs y Termos')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Termos</button>
-                <button onclick="filterCategory('Bolsas y Mochilas')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Mochilas</button>
+                <button onclick="filterCategory('Mugs y Termos')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Mugs & Termos</button>
+                <button onclick="filterCategory('Bolsas y Mochilas')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Bolsas & Mochilas</button>
+                <button onclick="filterCategory('Lifestyle')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Lifestyle & Varios</button>
             </div>
             <div class="w-full md:w-80 shrink-0">
-                <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Buscar producto o referencia..." class="w-full pl-5 pr-5 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FF6600] shadow-sm">
+                <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Buscar línea, ej: bolígrafos..." class="w-full pl-5 pr-5 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FF6600] shadow-sm">
             </div>
         </div>
 
         <!-- Grid de la Galería -->
-        <div id="product-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             <!-- Los productos cargarán aquí vía JS -->
         </div>
         
         <div id="no-results" class="hidden text-center py-16 text-gray-500 text-lg">
-            No encontramos coincidencias. <br/><span class="text-sm">Intenta buscar con otra palabra.</span>
+            No encontramos esa línea de producto. <br/><span class="text-sm">Intenta buscar de forma más general.</span>
         </div>
     </section>
 
@@ -101,19 +100,19 @@
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             
-            <!-- Contenedor del Mockup Gráfico Dinámico -->
-            <div id="modal-image-container" class="md:w-1/2 flex items-center justify-center h-64 md:h-auto relative overflow-hidden">
-                <!-- Se inyecta desde JS -->
+            <div class="md:w-1/2 bg-slate-100 flex items-center justify-center h-64 md:h-auto relative overflow-hidden">
+                <img id="modal-img" src="" alt="Vista ampliada" class="w-full h-full object-cover">
             </div>
             
             <div class="md:w-1/2 p-6 md:p-10 flex flex-col justify-center overflow-y-auto">
-                <span id="modal-ref" class="text-[#FF6600] font-bold text-sm tracking-wider uppercase mb-2"></span>
+                <span id="modal-cat" class="text-[#FF6600] font-bold text-sm tracking-wider uppercase mb-2"></span>
                 <h2 id="modal-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4 leading-tight"></h2>
                 <p id="modal-desc" class="text-slate-600 mb-8 leading-relaxed text-sm md:text-base"></p>
                 
                 <a id="modal-wa" href="#" target="_blank" class="w-full text-center bg-green-500 text-white font-bold py-3.5 md:py-4 rounded-xl hover:bg-green-600 transition-transform transform hover:scale-105 flex justify-center items-center gap-3 shadow-lg shadow-green-500/30 text-lg">
-                    <img src="https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/whatsapp.png" alt="WhatsApp" class="h-6 w-6 filter brightness-0 invert"> Solicitar Cotización
+                    <img src="https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/whatsapp.png" alt="WhatsApp" class="h-6 w-6 filter brightness-0 invert"> Solicitar Catálogo y Cotizar
                 </a>
+                <p class="text-xs text-center text-gray-400 mt-4">Atención y cotización personalizada por WhatsApp.</p>
             </div>
         </div>
     </div>
@@ -142,6 +141,22 @@
         </div>
     </section>
 
+    <!-- Beneficios / Confianza -->
+    <section class="bg-gray-100 py-12 border-t border-gray-200">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-around items-center gap-8 px-4">
+            <div class="flex flex-col items-center text-center gap-3">
+                <img src="https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/ECO.png" alt="Ecológico" class="h-12 w-auto">
+                <span class="font-bold text-slate-800">Línea Ecológica</span>
+                <p class="text-sm text-gray-500">Opciones amigables con el medio ambiente.</p>
+            </div>
+            <div class="flex flex-col items-center text-center gap-3">
+                <img src="https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/HORARIOS.png" alt="Horarios" class="h-12 w-auto">
+                <span class="font-bold text-slate-800">Atención Ágil</span>
+                <p class="text-sm text-gray-500">Respuesta rápida a tus requerimientos.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="bg-slate-950 text-white text-center py-10 px-4 border-t-4 border-[#FF6600]">
         <h3 class="font-bold text-lg mb-6 text-slate-300">Síguenos y haz tu pedido:</h3>
@@ -164,487 +179,442 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DE CATÁLOGO: MOCKUPS DINÁMICOS -->
+    <!-- SCRIPT DE GALERÍA POR LÍNEAS -->
     <script>
-        // Función que asigna el ícono vectorial perfecto basándose en el nombre del producto
-        function getIconSVG(name) {
-            const n = name.toLowerCase();
-            
-            // Bolígrafos, lápices, resaltadores
-            if(n.includes('bolígrafo') || n.includes('resaltador') || n.includes('lápiz') || n.includes('marcador')) {
-                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>`;
+        // Base de datos de Líneas de Producto con Imágenes Representativas de Alta Calidad
+        const productLines = [
+            { 
+                name: "Línea de Bolígrafos", 
+                cat: "Oficina", 
+                desc: "Contamos con una amplia variedad de bolígrafos plásticos, metálicos, ecológicos en fibra de trigo, con función stylus y estuches ejecutivos. Ideales para el uso diario o regalos premium.", 
+                img: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            },
+            { 
+                name: "Libretas y Agendas", 
+                cat: "Oficina", 
+                desc: "Agendas ejecutivas, libretas argolladas, opciones en RPET, corcho y bambú. Perfecto para mantener tu marca presente en reuniones y escritorios.", 
+                img: "https://images.unsplash.com/photo-1544816155-12df9643f363?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            },
+            { 
+                name: "Sets de Oficina y Memos", 
+                cat: "Oficina", 
+                desc: "Kits de escritorio, resaltadores con diseños originales, tacos de notas adheribles y artículos funcionales para organizar el espacio de trabajo.", 
+                img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            },
+            { 
+                name: "Termos y Botellas", 
+                cat: "Mugs y Termos", 
+                desc: "Botellas deportivas en plástico reciclado, cilindros de aluminio, y termos de acero inoxidable de doble pared para conservar la temperatura ideal de tus bebidas.", 
+                img: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            },
+            { 
+                name: "Mugs y Tazas", 
+                cat: "Mugs y Termos", 
+                desc: "Mugs cerámicos clásicos, mágicos para sublimación, tazas esmaltadas estilo retro y vasos con exterior de bambú o recubrimiento plástico.", 
+                img: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            },
+            { 
+                name: "Morrales y Mochilas", 
+                cat: "Bolsas y Mochilas", 
+                desc: "Morrales ejecutivos porta laptop, opciones de seguridad antirrobo y mochilas tipo tula deportivas perfectas para eventos y congresos.", 
+                img: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            },
+            { 
+                name: "Bolsas Ecológicas", 
+                cat: "Bolsas y Mochilas", 
+                desc: "Tote bags en algodón, yute y poliéster reciclado. Opciones duraderas, lavables y con amplia área de marcación para visibilizar tu logotipo.", 
+                img: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            },
+            { 
+                name: "Loncheras y Manos Libres", 
+                cat: "Bolsas y Mochilas", 
+                desc: "Loncheras térmicas para conservar alimentos, canguros y bolsos manos libres funcionales para el uso diario de tus colaboradores.", 
+                img: "https://images.unsplash.com/photo-1547949003-9792a18a2601?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            },
+            { 
+                name: "Audífonos y Audio", 
+                cat: "Tecnología", 
+                desc: "Audífonos Bluetooth de diadema o in-ear con estuches cargadores, y bocinas/altavoces inalámbricos de alta definición para el entretenimiento.", 
+                img: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            },
+            { 
+                name: "Gadgets y Cargadores", 
+                cat: "Tecnología", 
+                desc: "Baterías portátiles (Powerbanks), cables multicargadores, mouse inalámbricos y estaciones de carga rápida para mantenerse conectado.", 
+                img: "https://images.unsplash.com/photo-1528032733973-2e061806cc26?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            },
+            { 
+                name: "Herramientas y Linternas", 
+                cat: "Varios", 
+                desc: "Kits de herramientas compactos, flexómetros, navajas multiusos y linternas LED recargables o solares. Regalos funcionales de gran durabilidad.", 
+                img: "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            },
+            { 
+                name: "Sets de Bar y Coctelería", 
+                cat: "Varios", 
+                desc: "Elegantes sets de vino en cajas de bambú, kits de coctelería profesional, licoreras y tablas de quesos para regalos de alto perfil corporativo.", 
+                img: "https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            },
+            { 
+                name: "Llaveros y Destapadores", 
+                cat: "Varios", 
+                desc: "Llaveros metálicos, modelos con destapador incorporado, diseños divertidos y soportes para gafetes o carnets corporativos.", 
+                img: "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            },
+            { 
+                name: "Paraguas e Impermeables", 
+                cat: "Varios", 
+                desc: "Paraguas ejecutivos de apertura automática, modelos compactos, sombrillas reversibles y prácticos impermeables empacables.", 
+                img: "https://images.unsplash.com/photo-1554559591-1fb894fec92c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            },
+            { 
+                name: "Viaje y Cuidado Personal", 
+                cat: "Lifestyle", 
+                desc: "Cosmetiqueras, espejos portátiles, cobijas de viaje, pastilleros organizadores y sets para limpieza facial y relajación.", 
+                img: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+            },
+            { 
+                name: "Antiestrés y Entretenimiento", 
+                cat: "Lifestyle", 
+                desc: "Figuras antiestrés de diferentes formas (corazones, balones, nubes) y elegantes sets de juegos de mesa (dominó, cartas, jenga).", 
+                img: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
             }
-            // Libretas, agendas, notas
-            if(n.includes('libreta') || n.includes('agenda') || n.includes('cuaderno') || n.includes('memo') || n.includes('tablero')) {
-                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>`;
-            }
-            // Termos, botellas, tazas, licoreras
-            if(n.includes('termo') || n.includes('botella') || n.includes('vaso') || n.includes('mug') || n.includes('cilindro') || n.includes('taza') || n.includes('licorera')) {
-                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 8h-3V4H3c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h14c.6 0 1-.4 1-1v-4h2c.6 0 1-.4 1-1v-5c0-.6-.4-1-1-1zm-3 10H4V6h13v12zm1-8h2v4h-2v-4z"></path></svg>`;
-            }
-            // Mochilas, bolsas, loncheras
-            if(n.includes('mochila') || n.includes('morral') || n.includes('bolsa') || n.includes('lonchera') || n.includes('canguro') || n.includes('cartera')) {
-                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 10V8a2 2 0 00-2-2h-3.5a5.5 5.5 0 00-11 0H3a2 2 0 00-2 2v2m20 0v10a2 2 0 01-2 2H5a2 2 0 01-2-2V10m20 0h-3.5m-11 0H3m4-4a3.5 3.5 0 117 0"></path></svg>`;
-            }
-            // Tecnología
-            if(n.includes('audífono') || n.includes('altavoz') || n.includes('bocina') || n.includes('teclado') || n.includes('mouse') || n.includes('powerbank') || n.includes('cargador') || n.includes('reloj') || n.includes('soporte')) {
-                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>`;
-            }
-            // Herramientas, cintas métricas, calibradores
-            if(n.includes('herramient') || n.includes('cinta') || n.includes('calibrador') || n.includes('desarmador')) {
-                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>`;
-            }
-            // Llaveros, destapadores
-            if(n.includes('llavero') || n.includes('destapador')) {
-                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path></svg>`;
-            }
-            // Paraguas, impermeables
-            if(n.includes('paraguas') || n.includes('sombrilla') || n.includes('impermeable')) {
-                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12a9 9 0 1118 0M3 12h18M12 12v7m0 0a2 2 0 002 2m-2-2a2 2 0 01-2 2"></path></svg>`;
-            }
-            // Por defecto: un paquete o regalo
-            return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>`;
-        }
-
-        // Base de Datos Extensa (+130 Productos del PDF)
-        const rawProducts = [
-            ["AGCSI 027", "Agenda Semanal Clasica", "Incluye caja individual, separador y bolígrafo.", "Oficina"],
-            ["OF0677", "Set Ejecutivo Luxe", "Set en caja de papel con dos niveles magnéticos.", "Oficina"],
-            ["HL 9063", "Set Birkin", "Incluye bolígrafo metálico tipo rubber. Caja de regalo.", "Oficina"],
-            ["OF0678", "Set Ejecutivo Knight", "Set ejecutivo en caja de papel con bolígrafo retráctil.", "Oficina"],
-            ["OF0622", "Libreta Yamal", "Cuaderno A5 y bolígrafo de aluminio reciclado.", "Oficina"],
-            ["OF0572", "Set Ejecutivo Nexus", "Bolígrafo aluminio twist, libreta y mug 600 ml.", "Oficina"],
-            ["HE0389", "Set Ejecutivo Lumus", "Bolígrafo, porta tarjetas PU y llavero metálico.", "Oficina"],
-            ["BE0459", "Set Ejecutivo Matrix", "Cuaderno A5, bolígrafo twist y botella 550 ml.", "Oficina"],
-            ["PA0152", "Set Paraguas Monet", "Bolígrafo aluminio twist y libreta 80 hojas.", "Varios"],
-            ["62200 N", "Set Goyan", "Libreta 80 hojas, bolígrafo y tarjetero.", "Oficina"],
-            ["62500 G", "Set Lipetsk", "Batería 2600 mAh, bolígrafo stylus y tarjetero.", "Tecnología"],
-            ["SET 016", "Set Birkin (Termo)", "Termo, bolígrafo push y libreta pasta curpiel.", "Oficina"],
-            ["OF0632", "Set Ejecutivo Density", "Tarjetero, bolígrafo y llavero. Detalles bambú.", "Oficina"],
-            ["OF0574", "Set Ejecutivo Brooke", "Porta tarjetas, llavero y bolígrafo twist bambú.", "Oficina"],
-            ["OF0617", "Libreta Page", "Tapa de corcho, 80 hojas, bolígrafo stylus.", "Oficina"],
-            ["OF0664", "Libreta Gaudi", "Papel caña de azúcar, funda texturizada y bolígrafo.", "Oficina"],
-            ["OF0636", "Libreta Leonardo", "Cubierta PU suave, placa metálica, 80 hojas.", "Oficina"],
-            ["OF0634", "Libreta Newton", "Cubierta de PU, 80 hojas rayadas de 70 gr.", "Oficina"],
-            ["AGTSI 027", "Agenda Semanal", "Incluye caja individual y bolígrafo.", "Oficina"],
-            ["OF0670", "Libreta Ejecutiva Negra", "64 hojas rayadas A5, cubierta rígida, cinta.", "Oficina"],
-            ["OF0674", "Libreta Kafka", "Tamaño A5, cubierta de PU, cierre correa.", "Oficina"],
-            ["OF0673", "Libreta Shakespeare", "96 hojas rayadas A5, diseño tipo roble.", "Oficina"],
-            ["OF0190", "Libreta Ejecutiva", "Cubierta imitación cuero, banda elástica, 80 hojas.", "Oficina"],
-            ["OF0189", "Libreta Ejecutiva Mini", "Cubierta imitación cuero, cinta marcadora.", "Oficina"],
-            ["OF0596", "Libreta Holder Winner", "RPET, holder en bambú para celular, 80 hojas.", "Oficina"],
-            ["OF0641", "Libreta Ludwig", "Agenda A5 en PU y RPET patrón bambú.", "Oficina"],
-            ["OF0643", "Libreta Galilei", "Tapa dura en PU y tela RPET.", "Oficina"],
-            ["OF0642", "Mini Libreta Vivaldi", "Portada y contraportada en papel artesanal.", "Oficina"],
-            ["OF0152", "Cuaderno Ecológico", "Tapa cartón, argollado metálico, bolígrafo.", "Oficina"],
-            ["OF0640", "Libreta Bach", "A5, tapa blanda en PP, 80 hojas.", "Oficina"],
-            ["OF0613", "Libreta Queen", "Cuero sintético y corcho, 80 hojas.", "Oficina"],
-            ["OF0597", "Libreta Coffee", "Fibra de café, 70 hojas rayadas A5.", "Oficina"],
-            ["OF0650", "Mini Tablero Jordan", "Pizarra blanca tipo libreta con marcador.", "Oficina"],
-            ["HL 035 N", "Libreta Vinnytsia", "70 hojas, bolígrafo y notas adheribles.", "Oficina"],
-            ["HL 2040", "Libreta Antlia", "70 hojas, bolígrafo ecológico y espiral doble.", "Oficina"],
-            ["HL 9047", "Libreta Kolm", "80 hojas, cubierta rígida, clip metálico rose gold.", "Oficina"],
-            ["HL 030", "Libreta Kenya", "80 hojas, separador, elástico y bolígrafo.", "Oficina"],
-            ["HL 9063_2", "Planeador Tyzden", "Planeador semanal plegable con porta plumas.", "Oficina"],
-            ["CAL 100", "Calendario Ontur", "Calendario perpetuo.", "Oficina"],
-            ["OF0653", "Set Memos Mondrian", "Portabolígrafos, notas, pizarra blanca.", "Oficina"],
-            ["OF0443", "Memo Cube", "Taco 5 colores, memos amarillos y banderitas PET.", "Oficina"],
-            ["OF0226", "Memo Slim", "Bolsillo para regla, notas, bolígrafo ecológico.", "Oficina"],
-            ["OF9241", "Notas Great", "Forma mano pulgar arriba. 4 colores.", "Oficina"],
-            ["OF0600", "Set Memos Pocket", "Material Tetra pak recuperado. Banderitas.", "Oficina"],
-            ["ES0292", "Resaltador Zanzibar", "5 resaltadores en estuche traslúcido.", "Oficina"],
-            ["ES0287", "Resaltador Calcuta", "5 resaltadores estuche plástico 5 colores.", "Oficina"],
-            ["ES0489", "Resaltador Five", "Resaltador tradicional con 5 opciones de color.", "Oficina"],
-            ["ES0331", "Resaltador Spring", "5 resaltadores en parafina forma flor.", "Oficina"],
-            ["OF0668", "Cinta Portacarnet Link", "Poliéster con cierre velcro y clip metálico.", "Varios"],
-            ["OF0660", "Calculadora Bohr", "Bolsillo, pantalla LCD, memoria y porcentajes.", "Oficina"],
-            ["OF0645", "Calendario Crono", "Material PS, 4 cubos modulares.", "Oficina"],
-            ["OF0647", "Kit McGregor", "Set oficina diseño octogonal, cierre a presión.", "Oficina"],
-            ["OF0646", "Kit Hector", "Forma corazón, grapadora, cinta, tijeras.", "Oficina"],
-            ["OF0669", "Tablero Time", "Calendario acrílico reutilizable, base madera.", "Oficina"],
-            ["KTC 310", "Base Chooyu", "Soporte smartphone en madera.", "Tecnología"],
-            ["TE0736", "Happygafete Retráctil", "Accesorio retráctil y soporte celular.", "Varios"],
-            ["PRO 066", "Portagafete Dravik", "Identificador delgado con ventana transparente.", "Varios"],
-            ["OF0535", "Set Escritorio Jar", "Tijeras, cosedora, quitaganchos.", "Oficina"],
-            ["HE0102", "Identificador Redondo", "Portacarné retráctil con clip bolsillo.", "Varios"],
-            ["OF0498", "Calculadora Genius", "Calculadora plástica de 8 dígitos.", "Oficina"],
-            ["OF0099", "Alcancía Miss Piggy", "Forma de cerdito, tapón en la nariz.", "Varios"],
-            ["OF0399", "Alcancía Elephant", "Forma elefante, trompa holder celular.", "Varios"],
-            ["OF0452", "Alcancía Piggy Teen", "Mediana forma cerdito, tapón nariz.", "Varios"],
-            ["OF0355", "Alcancía Hippo", "Forma hipopótamo con tapón inferior.", "Varios"],
-            ["OF0245", "Alcancía Oink", "Forma cerdo en colores vibrantes.", "Varios"],
-            ["OF0304", "Alcancía Piggy White", "Combinación colores con blanco.", "Varios"],
-            ["ES1052", "Resaltador Doctor", "Diseño jeringa médica, escala numérica.", "Oficina"],
-            ["ES1053", "Resaltador Manila", "Cuatro puntas de color en un solo cuerpo.", "Oficina"],
-            ["ES1055", "Resaltador Panama", "Forma corazón, paja de trigo, tres puntas.", "Oficina"],
-            ["ES0167", "Set Ecológico Cloud", "Forma nube, paja de trigo. Extraíble matera.", "Oficina"],
-            ["ES1068", "Set Ecológico Leaf", "Base forma hoja verde, bloc y bolígrafo.", "Oficina"],
-            ["ES1028", "Bolígrafo Pirlo", "Balón de fútbol, mecanismo giratorio.", "Oficina"],
-            ["ES1058", "Bolígrafo Accra", "Paja de trigo, aspecto orgánico.", "Oficina"],
-            ["ES1062", "Bolígrafo Boston", "Paja de trigo, texturizado, ligero.", "Oficina"],
-            ["ES1056", "Bolígrafo San Francisco", "Plástico laca perlada, clip cromado.", "Oficina"],
-            ["ES1066", "Bolígrafo Helsinki", "Twist cuerpo negro, estuche tubo transparente.", "Oficina"],
-            ["ES1026", "Bolígrafo Bern", "Esfera antiestrés en la parte superior.", "Oficina"],
-            ["ES1022", "Bolígrafo Tijuana", "Plástico ABS, barril engomado de color.", "Oficina"],
-            ["ES1057", "Bolígrafo Leeds", "Retráctil, cañón blanco, clip contrastante.", "Oficina"],
-            ["ES0949", "Bolígrafo Santorini", "Apertura a presión, clip metálico.", "Oficina"],
-            ["ES0998", "Bolígrafo Castelo", "Metálico, clip cromado, gel.", "Oficina"],
-            ["ES0245", "Bolígrafo Luxemburgo", "Con resaltador. Doble tapa.", "Oficina"],
-            ["ES0349", "Bolígrafo Catania", "Twist y Touch para pantallas.", "Oficina"],
-            ["ES0354", "Bolígrafo Manchester", "Twist y Touch.", "Oficina"],
-            ["ES0910", "Bolígrafo Italia", "Tapa con juego puzzle interno.", "Oficina"],
-            ["ES0956", "Bolígrafo Nápoles", "Retráctil y clip de bambú.", "Oficina"],
-            ["ES1037", "Bolígrafo Perth", "Metálico, clip cromado elegante.", "Oficina"],
-            ["ES1003", "Bolígrafo Bonnet", "Aluminio reciclado, bolígrafo twist y roller.", "Oficina"],
-            ["ES0964", "Bolígrafo Milán", "Aluminio metalizado, tapa a presión.", "Oficina"],
-            ["ES1005", "Bolígrafo Gang", "Aluminio, mate lacado, clip cromado.", "Oficina"],
-            ["RQ 020 G", "Bolígrafo Magotty", "Mecanismo twist. Incluye estuche.", "Oficina"],
-            ["RQ 013", "Bolígrafo Aros", "Terminado rubber. Mecanismo pulsador.", "Oficina"],
-            ["RQ 1135", "Bolígrafo Zia", "Luz LED logotipo iluminado. Twist.", "Oficina"],
-            ["RQ 600 G", "Bolígrafo Bareti", "Mecanismo twist. Incluye funda.", "Oficina"],
-            ["SH 2035", "Bolígrafo Otara", "Mecanismo pulsador.", "Oficina"],
-            ["EST 080 BE", "Set Vernal", "Touch screen y lapicera 0.5 mm.", "Oficina"],
-            ["ES0970", "Set Bolígrafos Roma", "Aluminio reciclado, retráctil y roller.", "Oficina"],
-            ["EST 015", "Set Cobalt", "Bolígrafo y lapicera 0.5 mm. Estuche metálico.", "Oficina"],
-            ["SET 030 N", "Set Tevi", "Bolígrafo metálico y llavero suave.", "Oficina"],
-            ["OF0573", "Set Ejecutivo Lexie", "Llavero y bolígrafo bambú.", "Oficina"],
-            ["OF0575", "Set Ejecutivo Andromeda", "Llavero y bolígrafo twist bambú.", "Oficina"],
-            ["EST 035 BE", "Set Guama", "Madera, porta pluma y tarjetas.", "Oficina"],
-            ["RQ 1100", "Bolígrafo Pisati", "Rubber, touch screen, botón metalizado.", "Oficina"],
-            ["RQ 1130", "Bolígrafo Holz", "Rubber y grip bambú.", "Oficina"],
-            ["RQ 1145", "Bolígrafo Gilmore", "Metálico mate, clip rose gold.", "Oficina"],
-            ["SH 2415", "Bolígrafo Iller", "Mecanismo pulsador.", "Oficina"],
-            ["SH 9011", "Bolígrafo Wilde", "Touch screen y rubber.", "Oficina"],
-            ["SH 3070", "Bolígrafo Ketiva", "Terminado rubber. Pulsador.", "Oficina"],
-            ["SH 3060", "Bolígrafo Nadir", "Mecanismo pulsador.", "Oficina"],
-            ["ES0993", "Bolígrafo Gold", "Ejecutivo acabado metal. Twist.", "Oficina"],
-            ["RQ 1006 G", "Bolígrafo Lacock", "Roller ball con tapón.", "Oficina"],
-            ["SOC 011-01", "Pelota Futbol", "Antiestrés balón de fútbol.", "Varios"],
-            ["SOC 011-08", "Corazón Antiestrés", "Antiestrés tricolor corazón.", "Varios"],
-            ["AN0048", "Bola Bandera", "Desestresante tricolor.", "Varios"],
-            ["SOC 079", "Anti-stress Piesi", "Bloque de construcción.", "Varios"],
-            ["AN0067", "Bola Merry", "Carita feliz material suave.", "Varios"],
-            ["AN0068", "Antiestrés Nimbus", "Forma de nube.", "Varios"],
-            ["AN0064", "Antiestrés Bumpy", "Silicona ergonómica texturizada.", "Varios"],
-            ["AN0066", "Antiestrés Smiley", "Holder celular carita feliz PU.", "Varios"],
-            ["AN0047", "Antiestrés Bola", "Material suave y flexible.", "Varios"],
-            ["AN0053", "Antiestrés Corazón", "Forma de corazón.", "Varios"],
-            ["AN0058", "Llavero Redondo", "Antiestrés forma de bola.", "Varios"],
-            ["AN0054", "Antiestrés Estrella", "Forma de estrella.", "Varios"],
-            ["AN0055", "Antiestrés Gota", "Forma de gota.", "Varios"],
-            ["AN0057", "Llavero Corazón", "Antiestrés forma corazón.", "Varios"],
-            ["AN0059", "Planeta Tierra", "Forma de planeta tierra.", "Varios"],
-            ["HO0419", "Kit Coctelería Haddock", "Acero inoxidable, coctelera, medidor, colador.", "Varios"],
-            ["HO0107", "Caja Bambú Bar", "Sacacorchos, cortagotas, tapón, aro.", "Varios"],
-            ["HO0417", "Set de Bar Ale", "Estuche rígido, sacacorchos multifunción.", "Varios"],
-            ["87200", "Licorera Bristol", "Tapa rosca, 2 vasos con curpiel, embudo.", "Varios"],
-            ["HO0305", "Set Quesos Roquefort", "Tabla redonda con 4 cuchillos.", "Varios"],
-            ["HO0368", "Set BBQ", "6 piezas acero inoxidable, estuche textil.", "Varios"],
-            ["IMP 001", "Impermeable Grisel", "Plástico transparente, estuche redondo.", "Varios"],
-            ["PA0167", "Paraguas Cloudy", "Estructura fibra vidrio, UV, negro.", "Varios"],
-            ["PA0165", "Paraguas Giotto", "Fibra vidrio, UV, mango antideslizante.", "Varios"],
-            ["PA0166", "Paraguas Twist", "5 pliegues, 6 varillas, UV.", "Varios"],
-            ["PA0156", "Paraguas Warhol", "Automático, fibra de vidrio, gancho retráctil.", "Varios"],
-            ["PA0154", "Set Paraguas Dalí", "8 cascos y botella acero inoxidable.", "Varios"],
-            ["PA0151", "Set Paraguas Da Vinci", "Botella 600ml y paraguas detalle bambú.", "Varios"],
-            ["PA0126", "Paraguas Urano", "Reversible, 8 cascos, fibra vidrio.", "Varios"],
-            ["PA0136", "Paraguas Jones II", "Mango curvo, automático.", "Varios"],
-            ["PAR 012", "Paraguas Zlin", "Manual. 6 Paneles bolsillo.", "Varios"],
-            ["PAR 034", "Paraguas Goccia", "8 paneles, mango EVA, protección UV.", "Varios"],
-            ["PAR 026", "Paraguas Summer", "Semiautomático. 8 paneles, fibra de vidrio.", "Varios"],
-            ["PA0147", "Paraguas Dayana", "23 pulgadas, apertura automática.", "Varios"],
-            ["PA0163", "Impermeable Raincase", "PEVA, estuche malla RPET.", "Varios"],
-            ["PA0138", "Paraguas Corny II", "Mango en goma EVA, automático.", "Varios"],
-            ["BE0454", "Botella Williams", "Plástico translúcida, marcas tiempo. 1000 ml.", "Mugs y Termos"],
-            ["BE0457", "Botella Sublimación", "Acero inox sublimable, doble pared. 20 Oz.", "Mugs y Termos"],
-            ["BE0460", "Set Goliath", "Botella 550ml y dos vasos 300ml acero inox.", "Mugs y Termos"],
-            ["ANF 006", "Cilindro Lake", "Rosca twist-off.", "Mugs y Termos"],
-            ["BE0413", "Botella Mars", "Tapa cierre giratorio ergonómico.", "Mugs y Termos"],
-            ["ANF 017", "Cilindro Tisza", "Infusionador frutas, rosca boquilla.", "Mugs y Termos"],
-            ["ANF 033", "Tarro Hayling", "Tapa aluminio rosca, popote.", "Mugs y Termos"],
-            ["ANF 060", "Cilindro Alex", "Rosca twist-off.", "Mugs y Termos"],
-            ["SOC 980", "Cilindro Soccer", "Rosca twist-off.", "Mugs y Termos"],
-            ["BE0455", "Botella Gordon", "RPET, cierre giratorio, pitillo.", "Mugs y Termos"],
-            ["BE0452", "Botella Mahomes", "Plástico abertura corrediza.", "Mugs y Termos"],
-            ["BE0388", "Botella Urban", "RPET tapa roscada, cordón. 550 ml.", "Mugs y Termos"],
-            ["BE0404", "Botella Dominion", "RPET tapón bambú PP.", "Mugs y Termos"],
-            ["BE0287", "Vaso Birlos", "Deportiva con shaker.", "Mugs y Termos"],
-            ["BE0420", "Botella Ranger", "Térmica acero inox, asa integrada.", "Mugs y Termos"],
-            ["BE0423", "Botella Tiger", "MagSafe soporte magnético.", "Mugs y Termos"],
-            ["BE0373", "Botella Mustang", "Acero inox, tapa cierre giratorio.", "Mugs y Termos"],
-            ["BE0376", "Botella Lennox", "Acero inox, exterior bambú.", "Mugs y Termos"],
-            ["BE0405", "Botella Cord", "Vacuum doble pared acero inox.", "Mugs y Termos"],
-            ["BE0430", "Botella Knick", "Aluminio tapa bambú y asa.", "Mugs y Termos"],
-            ["BE0069", "Botella Pull", "Aluminio tapa rosca boquilla plástico.", "Mugs y Termos"],
-            ["BE0034", "Botella Tower", "Aluminio gancho carabinero.", "Mugs y Termos"],
-            ["BE0033", "Botella Miles", "Aluminio gancho carabinero.", "Mugs y Termos"],
-            ["BE0234", "Botella Action", "Aluminio con agarradera, pitillo.", "Mugs y Termos"],
-            ["TMPS 164", "Termo Dimash", "Doble pared acero inox vacio.", "Mugs y Termos"],
-            ["TMPS 204", "Termo Zulu", "Doble pared acero inox vacio, pitillo.", "Mugs y Termos"],
-            ["TMPS 212", "Vaso Blag", "Doble pared plástico tipo rubber.", "Mugs y Termos"],
-            ["TMPS 237", "Vaso Blur", "Cambia de color bebidas frías.", "Mugs y Termos"],
-            ["BE0438", "Botella Wobble", "Práctico cierre giratorio pitillo.", "Mugs y Termos"],
-            ["TMPS 274", "Termo Tromso", "Plástico pared sencilla asa.", "Mugs y Termos"],
-            ["TAZ 024 S", "Taza Kinsale", "Doble pared acero exterior plástico.", "Mugs y Termos"],
-            ["TAZ 026", "Taza Rimo", "Cerámica interior blanco.", "Mugs y Termos"],
-            ["TAZ 072", "Taza Eyra", "Doble pared acero interno, 15 Oz.", "Mugs y Termos"],
-            ["TMPS 194", "Termo Laska", "Doble pared acero externo.", "Mugs y Termos"],
-            ["BE0425", "Vaso Astro", "Acero inox tapa presión.", "Mugs y Termos"],
-            ["BE0426", "Vaso Bruin", "Acero inox base plástica.", "Mugs y Termos"],
-            ["BE0429", "Vaso Wild", "Acero inox seguro corredizo.", "Mugs y Termos"],
-            ["BE0424", "Vaso Dodger", "Acero inox seguro corredizo y pitillo.", "Mugs y Termos"],
-            ["BE0445", "Vaso Suns", "Doble pared texturizado.", "Mugs y Termos"],
-            ["BE0444", "Vaso Bulls", "Doble pared cierre giratorio.", "Mugs y Termos"],
-            ["BE0446", "Vaso Raptors", "Mug tapa a presión boquilla.", "Mugs y Termos"],
-            ["BE0330", "Vaso Queen", "Doble pared interior PP base antideslizante.", "Mugs y Termos"],
-            ["BE0366", "Vaso Bambú Mix", "Acero inox bambú, 12h frio 6h calor.", "Mugs y Termos"],
-            ["BE0331", "Taza Galaxy", "Metálica esmaltada retro.", "Mugs y Termos"],
-            ["BE0359", "Vaso Bambú II", "Fibra bambú banda protectora.", "Mugs y Termos"],
-            ["BE0110", "Mug Sublime", "Cerámica sublimación.", "Mugs y Termos"],
-            ["BE0111", "Mug Sublime 110z", "Cerámica sublimación colores.", "Mugs y Termos"],
-            ["BE0112", "Mug Magic", "Muestra imagen caliente.", "Mugs y Termos"],
-            ["BE0113", "Mug Cuchara", "Cerámica sublimación cuchara.", "Mugs y Termos"],
-            ["BE0114", "Mug Metálico", "Acero inox térmico sublimación.", "Mugs y Termos"],
-            ["BE0431", "Set Marine", "Botella acero inox, tres tazas.", "Mugs y Termos"],
-            ["BO0502", "Bolsa Gentle", "Tote bag dos tonos lona.", "Bolsas y Mochilas"],
-            ["BO0508", "Lonchera Egg", "Bicolor, bolsillo frontal.", "Bolsas y Mochilas"],
-            ["BO0488", "Bolso Puffy", "Textura acolchada impermeable.", "Bolsas y Mochilas"],
-            ["BO0480", "Mochila Logan", "Kambrel sublimación 80gr.", "Bolsas y Mochilas"],
-            ["BO0013", "Mochila Kambrel", "Ecológica con cordón.", "Bolsas y Mochilas"],
-            ["BO0018", "Mochila Corner", "Dos colores bolsillo malla.", "Bolsas y Mochilas"],
-            ["BO0469", "Bolsa Carter", "Metalizado brillante reflectivo.", "Bolsas y Mochilas"],
-            ["BO0477", "Slim Bag Pro", "Sublimación ligera.", "Bolsas y Mochilas"],
-            ["BO0468", "Bolsa Hoover", "Papel kraft no tejido.", "Bolsas y Mochilas"],
-            ["BO0493", "Bolsa Brilliant", "Acabado metálico mate.", "Bolsas y Mochilas"],
-            ["BO0492", "Bolsa Boost", "Diseño bicolor estampado.", "Bolsas y Mochilas"],
-            ["BO0501", "Bolsa Prime", "Algodón asas largas fuelle.", "Bolsas y Mochilas"],
-            ["BO0465", "Bolsa Mellow", "Tote versátil asas resistentes.", "Bolsas y Mochilas"],
-            ["BO0020", "Slim Bag", "Bolsa ecológica.", "Bolsas y Mochilas"],
-            ["B00057", "Quick Bag", "Agarradera corta.", "Bolsas y Mochilas"],
-            ["BO0433", "Slim Bag Ecológica", "Bolsa ecológica reutilizable.", "Bolsas y Mochilas"],
-            ["BO0104", "Andy Bag", "Doble agarradera costuras.", "Bolsas y Mochilas"],
-            ["BO0022", "Bolsa Gaby", "Base fondo ecológica.", "Bolsas y Mochilas"],
-            ["ACC 002 BE", "Bolsa Ciro", "Yute laminada, ventana PVC.", "Bolsas y Mochilas"],
-            ["SIN 114", "Bolsa Winter", "Asas redondeadas yute.", "Bolsas y Mochilas"],
-            ["SIN 163 BE", "Bolsa Lash", "Sin fuelle asas yute.", "Bolsas y Mochilas"],
-            ["SIN 604", "Bolsa Candy", "Interior laminado cordones algodón.", "Bolsas y Mochilas"],
-            ["SIN 660 BE", "Bolsa Terracota", "Algodón natural, jareta.", "Bolsas y Mochilas"],
-            ["SIN 763 N", "Bolsa Moran", "Porta botella termo 900 ml.", "Bolsas y Mochilas"],
-            ["SIN 195 N", "Mochila Kongur", "Antirrobo laptop 14\".", "Bolsas y Mochilas"],
-            ["SIN 587", "Mochila Berlin", "Solapa broche expansión.", "Bolsas y Mochilas"],
-            ["SIN 404 N", "Mochila Atena", "Salida USB laptop 14\".", "Bolsas y Mochilas"],
-            ["BO0465_2", "Morral Bear", "41 lts bolsillos laterales.", "Bolsas y Mochilas"],
-            ["BO0453", "Morral Charles", "13 lts laptop 14\".", "Bolsas y Mochilas"],
-            ["BO0195", "Morral Rochester", "14 lts agarradera aluminio.", "Bolsas y Mochilas"],
-            ["BO0471", "Lonchera Berry", "Reciclado 600D térmico.", "Bolsas y Mochilas"],
-            ["BO0210", "Lonchera Fudan", "Térmica aluminio interno.", "Bolsas y Mochilas"],
-            ["BO0438", "Lonchera Apple", "Recubrimiento interno hebilla.", "Bolsas y Mochilas"],
-            ["BO0410", "Canguro Randy", "Bolsillo frontal y trasero línea reflectiva.", "Bolsas y Mochilas"],
-            ["BO0474", "Manos Libres Benny", "Sling compacto frontal cremallera.", "Bolsas y Mochilas"],
-            ["BO0276", "Manos Libres Cairo", "Cargadera ajustable bolsillo velcro.", "Bolsas y Mochilas"],
-            ["DPO 024", "Destapador Tiatu", "Llavero destapador.", "Varios"],
-            ["DPO 031", "Destapador Lúzaran", "Casco destapador luz 1 LED.", "Varios"],
-            ["K 63290", "Llavero Casa-Coche", "Argolla separable caja.", "Varios"],
-            ["M 2310", "Llavero Darini", "Caja individual.", "Varios"],
-            ["M5813", "Llavero Caspio", "Caja individual.", "Varios"],
-            ["M 7985 N", "Llavero Pilsen", "Metálico correa curpiel destapador.", "Varios"],
-            ["HE0349", "Llavero Machine", "Forma de automóvil.", "Varios"],
-            ["HE0354", "Llavero Beyond", "Forma rectangular.", "Varios"],
-            ["HE0355", "Llavero Burzum", "Forma redonda.", "Varios"],
-            ["OF0584", "Llavero Tracy", "Metálico redondo bambú.", "Varios"],
-            ["OF0583", "Llavero Tommy", "Metálico rectangular bambú.", "Varios"],
-            ["HE0348", "Llavero Home", "Forma de casa.", "Varios"],
-            ["HE0370", "Llavero Breaker", "Abrebotellas linterna LED cinta.", "Varios"],
-            ["HE0222", "Destapador Bottle", "Aluminio forma destapador.", "Varios"],
-            ["HE0342", "Llavero Easy", "Destapador aluminio reciclado.", "Varios"],
-            ["HE0387", "Antiestrés Pause", "Teclas antiestrés celular.", "Varios"],
-            ["HE0365", "Llavero Lar", "4 puntas destornillador interior.", "Varios"],
-            ["HE0366", "Antiestrés Pop It", "Silicona flexible burbujas.", "Varios"],
-            ["HE0377", "Llavero Always", "Cinta ancha metálica.", "Varios"],
-            ["HE0388", "Llavero Rudolph", "Forma de reno navideño.", "Varios"],
-            ["HE0371", "Llavero Sainz", "Forma moto destapador.", "Varios"],
-            ["HE0191", "Destapador Ok", "Forma mano cinta métrica 1m.", "Varios"],
-            ["HE0012", "Mini Flexómetro", "Cinta métrica metálica 1m.", "Varios"],
-            ["HE0075", "Cinta Llanta", "Cinta 1m forma llanta.", "Varios"],
-            ["HE0385", "Herramientero Beacon", "Linterna LED 8 destornilladores.", "Varios"],
-            ["HE0386", "Set Rossi", "Forma moto 10 puntas.", "Varios"],
-            ["HE0357", "Herramientero Vettel", "Forma automóvil 10 puntas copas.", "Varios"],
-            ["HE0356", "Multiusos Gimli", "Herramienta multifunción.", "Varios"],
-            ["HE0359", "Multiusos Durin", "Formato plegable.", "Varios"],
-            ["HE0084", "Set Lighter", "Linterna externa ratchet copas.", "Varios"],
-            ["HE0003", "Kit Rubber", "Forma llanta puntas copas alicate.", "Varios"],
-            ["HE0001", "Calibrador Ergo", "Aire llantas.", "Varios"],
-            ["HE0188", "Herramientero Homme", "Estuche alicate navaja.", "Varios"],
-            ["HE0368", "Cinta Distance", "150 cm retráctil.", "Varios"],
-            ["HE0369", "Cinta Clear", "150 cm retráctil.", "Varios"],
-            ["HE0259", "Flexómetro Build", "300 cm cuerda transporte.", "Varios"],
-            ["HE0334", "Linterna Carabinero", "Mini gancho carabinero.", "Varios"],
-            ["HE0136", "Linterna Ankara", "Sistema twist argolla.", "Varios"],
-            ["HE0332", "Linterna Bambú", "Revestimiento bambú.", "Varios"],
-            ["HE0382", "Linterna Lectura", "Clip ajustable USB C.", "Varios"],
-            ["HE0347", "Carga Sunset", "Solar y dinamo.", "Varios"],
-            ["HE0290", "Silbato Metálico", "Tubular argolla.", "Varios"],
-            ["HER 023 N", "Set Authie", "Desarmador 10 puntas llaves.", "Varios"],
-            ["HER 031", "Desarmador Azuer", "2 puntas cruz 2 planas.", "Varios"],
-            ["HER 048 N", "Set Pitcairn", "16 puntas 8 dados.", "Varios"],
-            ["VI0356", "Abanico Air", "Plano alambre.", "Varios"],
-            ["VI0349", "Toalla Solara", "Rayas cierre caucho.", "Varios"],
-            ["V10347", "Abanico Suki", "Varillas madera poliéster.", "Varios"],
-            ["VI0350", "Cobija Nest", "Viaje estuche carabinero.", "Varios"],
-            ["VI0348", "Portadocumentos Atlas", "Viaje pasaporte tarjetas.", "Varios"],
-            ["V10331", "Toalla Fuji", "Estuche compacto gancho.", "Varios"],
-            ["VI0354", "Bandas Endure", "Set 3 bandas resistencia.", "Varios"],
-            ["VI0102", "Colchoneta Yoga", "Ejercicios bolsa transporte.", "Varios"],
-            ["VI0195", "Manta Cool", "Refrescante evaporación.", "Varios"],
-            ["VI0336", "Set Coco", "Botellas viaje 60ml.", "Varios"],
-            ["V10306", "Cobija Iris", "Lana correa nylon.", "Varios"],
-            ["SA0325", "Kit Visit", "Botellas plástico PET.", "Varios"],
-            ["VI0034", "Cojín Inflable", "Descansacuello.", "Varios"],
-            ["BO0505", "Bolsa Cozy", "Impermeable PVC 5L.", "Bolsas y Mochilas"],
-            ["V10050", "Silla Tijera", "Plegable 3 patas 80kg.", "Varios"],
-            ["NES 005", "Neceser Wasser", "Viaje impermeable.", "Varios"],
-            ["LEN 008 N", "Lentes Bangkok", "UV 400 bambú trigo.", "Varios"],
-            ["TE0682", "Gafas Kona Bay", "UV400 auriculares incorporados.", "Tecnología"],
-            ["VI0358", "Set Dominó", "Estuche bambú dominó cartas.", "Varios"],
-            ["VI0357", "Set Beach", "Raquetas ajedrez parchís.", "Varios"],
-            ["VI0353", "Set Golf Rahm", "Toalla tees reparador.", "Varios"],
-            ["VI0358_2", "Juego 4 en Linea", "Acrílico base madera.", "Varios"],
-            ["VI0316", "Set Joker", "Madera cartas dados.", "Varios"],
-            ["VI0315", "Torre Empire", "Juego mesa bloques.", "Varios"],
-            ["DAM 009", "Cosmetiquera Lorelei", "Transparente yute.", "Varios"],
-            ["DAM 026 BE", "Kit Adri", "Esponjas piedra pómez.", "Varios"],
-            ["DAM 029", "Brochas Furela", "Plástico 4 brochas peine.", "Varios"],
-            ["DAM 064", "Descanso Marie", "Antifaz banda liga cabello.", "Varios"],
-            ["W 652", "Cartera Delia", "Tarjetas identificador.", "Varios"],
-            ["DAM 066", "Brochas Romina", "Estuche elegante brochas esponja.", "Varios"],
-            ["SA0342", "Máscara Snore", "Ergonómica luz.", "Varios"],
-            ["SA0339", "Joyero Petal", "Compacto cremallera.", "Varios"],
-            ["SA0327", "Espejo Bobbi", "Giratorio cerrojo trasero.", "Varios"],
-            ["SA0328", "Espejo Anastasia", "Plegable luz LED.", "Varios"],
-            ["SA0193", "Cosmetiquera Dainty", "Cremallera cosméticos.", "Varios"],
-            ["SA0307", "Limpieza Bambú", "Cuidado facial.", "Varios"],
-            ["SA0205", "Espejo Heart", "Doble aumento corazón.", "Varios"],
-            ["VNR033", "Costurero Oval", "Hilos aguja espejo.", "Varios"],
-            ["SA0335", "Molde Young", "Esferas hielo silicona.", "Varios"],
-            ["SA0232", "Máscara Compresa", "Esferas gel frio calor.", "Varios"],
-            ["SA0334", "Pastillero Medicase", "4 compartimientos cortador.", "Varios"],
-            ["SA0341", "Pastillero Balance", "6 compartimentos unidos.", "Varios"],
-            ["SA0218", "Pastillero Week", "Semanal 7 días.", "Varios"],
-            ["SA0304", "Pastillero Heart", "Corazón translúcido.", "Varios"],
-            ["SA0316", "Pastillero Pill", "Cuadrado 5 compartimentos.", "Varios"],
-            ["PT 1009", "Pastillero Xatti", "Organizador 4 compartimentos.", "Varios"],
-            ["PT 588", "Vaso Pastillero", "Tapa vaso retráctil.", "Varios"],
-            ["SLD 009 B", "Portagafete Doctor", "Cordón 80 cm clip.", "Varios"],
-            ["GO0021", "Gorra Harry", "5 paneles visera.", "Varios"],
-            ["GO0020", "Gorra Hanna", "5 paneles malla posterior.", "Varios"],
-            ["GO0023", "Gorra Neville", "6 paneles visera indeformable.", "Varios"],
-            ["GO0026", "Sombrero Pesquero", "Tela colores varios.", "Varios"],
-            ["AUD 029 N", "Audífonos Porter", "Bluetooth manos libres.", "Tecnología"],
-            ["AUD 051 B", "Bocina Apvalus", "Bluetooth 5W 800 mAh.", "Tecnología"],
-            ["CEL 070 N", "Soporte Baku", "Plegable base 360.", "Tecnología"],
-            ["CRG 044", "Powerbank Davul", "5,000 mAh USB Tipo C.", "Tecnología"],
-            ["SLF 005 N", "Selfiestick Lite", "Tripie bluetooth 10m.", "Tecnología"],
-            ["TE0743", "Teclado Mono", "Bluetooth Android iOS Windows.", "Tecnología"],
-            ["TE0724", "Altavoz McCartney", "Bluetooth cúpula luz RGB.", "Tecnología"],
-            ["TE0730", "Audífonos Bowie", "Estuche dorado indicador LED.", "Tecnología"],
-            ["TE0733", "Audífonos Yorke", "Open ear gancho ergonómico.", "Tecnología"],
-            ["TE0732", "Audífonos Grohl", "Estuche pantalla LED.", "Tecnología"],
-            ["TE0731", "Audífonos Cobain", "Estuche pantalla LED digital.", "Tecnología"],
-            ["TE0692", "Powerbank Slums", "4000 mAh Tipo C.", "Tecnología"],
-            ["TE0689", "Multicargador Civic", "RPET bambú Tipo C USB.", "Tecnología"],
-            ["TE0712", "Altavoz Joplin", "Bluetooth luz LED maceta táctil.", "Tecnología"],
-            ["TE0367", "Altavoz Aqua", "Bluetooth 400mAh 6 hrs.", "Tecnología"],
-            ["TE0717", "Portatarjetas Elon", "Lycra adhesivo 3M.", "Tecnología"],
-            ["TE0718", "Holder Rothko", "Bambú dos piezas estable.", "Tecnología"],
-            ["TE0716", "Holder Zuck", "Bambú paja de trigo.", "Tecnología"],
-            ["TE0665", "Holder Phone", "Plegable base antideslizante.", "Tecnología"],
-            ["TE0738", "Soporte Griply", "Pegatina agarre seguro.", "Tecnología"],
-            ["TE0719", "Ventilador Wind", "Plegable reloj 3 vel luz LED.", "Tecnología"],
-            ["TE0708", "Smartwatch Century", "Pantalla táctil ritmo cardiaco.", "Tecnología"],
-            ["TE0681", "Mouse Jerry", "Inalámbrico 2.4GHz Mac Windows.", "Tecnología"],
-            ["HO0383", "Reloj Desk", "Escritorio bambú acero.", "Tecnología"],
-            ["HO0384", "Reloj Weather", "Digital temperatura humedad.", "Tecnología"],
-            ["TE0672", "Cargador Wireless", "Carcasa madera ecológico.", "Tecnología"],
-            ["TE0687", "Multipuerto Phone", "Bambú notas 2 Tipo C 2 USB.", "Tecnología"],
-            ["TE0664", "Multipuerto Bambú", "USB 2.0 carga transmisión.", "Tecnología"],
-            ["TE0720", "Adaptador Bee", "Convierte USB-A en Tipo C.", "Tecnología"],
-            ["TE0740", "Mousepad Glide", "Superficie lisa antideslizante.", "Tecnología"],
-            ["TE0739", "Mousepad Lex", "Poliéster blanco sublimación.", "Tecnología"],
-            ["TE0704", "Audífonos Platinum", "Bluetooth 5.3 radio FM.", "Tecnología"],
-            ["TE0684", "Bluetooth Rotate", "Estuche ABS bambú 3 hrs.", "Tecnología"],
-            ["TE0683", "Auriculares Acoustic", "Bluetooth V5.4 IPX4 8 hrs.", "Tecnología"],
-            ["TE0677", "Audífonos Sound", "Paja trigo estuche 200mAh.", "Tecnología"],
-            ["BK0036", "Brink Magic", "12 unidades creatividad.", "Oficina"],
-            ["BK0034", "Lápices Gemelinos", "Doble punta 20 tonos.", "Oficina"],
-            ["BK0043", "Marcador Boldies", "Punta fina permanente.", "Oficina"],
-            ["BK0041", "Brink Botilletos", "Plumones punta delgada x12.", "Oficina"],
-            ["BK0039", "Brink Rayones", "Micropunta 0.4mm.", "Oficina"],
-            ["BK0040", "Brink Manchones", "Plumones gruesos lavables.", "Oficina"],
-            ["BK0037", "Acuarela Drippies", "Marcador acuarela agua.", "Oficina"],
-            ["BK0042", "Brink Popones", "Resaltador apuntes.", "Oficina"],
-            ["BK0033", "Borradorcito", "Borrador sin dañar papel.", "Oficina"]
         ];
-
-        const products = rawProducts.map(p => ({ 
-            ref: p[0], 
-            name: p[1], 
-            desc: p[2] || "Artículo promocional de alta calidad, listo para personalizar con el logo de tu empresa.", 
-            cat: p[3] 
-        }));
 
         const grid = document.getElementById('product-grid');
         const noResults = document.getElementById('no-results');
         let currentFilter = 'Todos';
         let currentSearch = '';
-        let filteredProductsCache = []; // Caché para referenciar el modal
+        let filteredLinesCache = []; 
 
         function renderProducts() {
             grid.innerHTML = '';
             
-            filteredProductsCache = products.filter(p => {
-                const matchCategory = currentFilter === 'Todos' || p.cat === currentFilter;
-                const matchSearch = p.name.toLowerCase().includes(currentSearch.toLowerCase()) || p.ref.toLowerCase().includes(currentSearch.toLowerCase());
+            filteredLinesCache = productLines.filter(p => {
+                const matchCategory = currentFilter === 'Todos' || p.cat === currentFilter || (currentFilter === 'Lifestyle' && p.cat === 'Varios');
+                const matchSearch = p.name.toLowerCase().includes(currentSearch.toLowerCase()) || p.desc.toLowerCase().includes(currentSearch.toLowerCase());
                 return matchCategory && matchSearch;
             });
 
-            if (filteredProductsCache.length === 0) {
+            if (filteredLinesCache.length === 0) {
                 noResults.classList.remove('hidden');
             } else {
                 noResults.classList.add('hidden');
                 
                 let htmlContent = '';
-                filteredProductsCache.forEach((p, index) => {
-                    const iconSVG = getIconSVG(p.name);
+                filteredLinesCache.forEach((p, index) => {
+                    const safeName = p.name.replace(/'/g, "\\'");
+                    const safeDesc = p.desc.replace(/'/g, "\\'");
                     
                     htmlContent += `
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 group flex flex-col hover:-translate-y-1 cursor-pointer" onclick="openModal(${index})">
-                        <!-- Mockup Gráfico Dinámico -->
-                        <div class="h-40 sm:h-48 relative bg-gradient-to-br from-slate-800 to-slate-900 flex flex-col items-center justify-center p-4 text-center group-hover:from-slate-700 group-hover:to-slate-800 transition-all duration-300">
-                            <div class="text-[#FF6600] mb-2 opacity-90 group-hover:scale-110 transition-transform duration-300">
-                                ${iconSVG}
-                            </div>
-                            <h3 class="text-white font-bold text-sm sm:text-base leading-tight line-clamp-2 px-2">${p.name}</h3>
-                            <div class="absolute top-2 left-2 bg-[#FF6600] text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">Ref: ${p.ref}</div>
-                            <div class="absolute bottom-2 right-2 opacity-10 text-white font-black text-xl">PyJ</div>
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-1 cursor-pointer" onclick="openModal(${index})">
+                        <div class="h-48 sm:h-56 overflow-hidden relative bg-slate-100 flex items-center justify-center">
+                            <img src="${p.img}" alt="${p.name}" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-90 transition-all duration-500">
+                            
+                            <!-- Etiqueta de Categoría -->
+                            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-slate-800 text-[11px] font-bold px-3 py-1.5 rounded-lg shadow-sm border border-gray-100">${p.cat === 'Varios' ? 'Lifestyle' : p.cat}</div>
                             
                             <!-- Overlay de Ampliar -->
-                            <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <div class="bg-white/90 p-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl">
-                                    <svg class="w-6 h-6 text-[#FF6600]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
-                                </div>
+                            <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                <div class="bg-white p-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl">
+                                    <svg class="w-6 h-6 text-[#FF6600]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path¡Tienes toda la razón, Micha! Listar 130 productos uno por uno hace que la página sea demasiado larga y aburrida de navegar para el cliente. 
+
+Tu idea es la más inteligente y la mejor práctica en diseño web corporativo: **Agrupar el catálogo por "Tipos o Líneas de Producto"**. 
+
+He rediseñado la galería para mostrar **solo una tarjeta por tipo de producto** (una de Bolígrafos, una de Libretas, una de Termos, una de Mochilas, etc.). A cada tipo le he asignado una **fotografía real, libre de derechos y de altísima calidad** que representa a la perfección esa categoría. 
+
+De esta forma:
+1. La página queda mucho más corta, limpia y elegante.
+2. Todo tiene una imagen real que llama la atención.
+3. Al hacer clic en "Bolígrafos", por ejemplo, se abre la ventana ampliada y el botón de WhatsApp dirá *"Hola, quiero cotizar la línea de Bolígrafos y Escritura"*, lo que te permite a ti enviarles por chat las opciones exactas que tienes disponibles según su presupuesto.
+
+Aquí tienes el código definitivo y optimizado:
+
+```html
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyJ Promocionales | Catálogo Corporativo</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    <style>
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Animación suave para la ventana de la galería */
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+        .modal-animate { animation: fadeIn 0.3s ease-out forwards; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- Header Fijo -->
+    <header class="bg-white shadow-sm p-4 flex justify-between items-center sticky top-0 z-50">
+        <a href="[https://www.instagram.com/pyjpromocionales/](https://www.instagram.com/pyjpromocionales/)" target="_blank">
+            <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/PyJ.PRINCIPAL.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/PyJ.PRINCIPAL.png)" alt="PyJ Promocionales" class="h-10 md:h-12 w-auto">
+        </a>
+        <a href="[https://wa.me/573202814844](https://wa.me/573202814844)" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-5 rounded-full flex items-center gap-2 transition-colors shadow-md">
+            <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/whatsapp.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/whatsapp.png)" alt="WhatsApp" class="h-5 w-5"> Cotizar
+        </a>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="flex flex-col items-center text-center p-8 md:p-20 bg-slate-900 text-white relative overflow-hidden border-b-4 border-[#FF6600]">
+        <div class="absolute inset-0 opacity-10 bg-[url('[https://www.transparenttextures.com/patterns/stardust.png](https://www.transparenttextures.com/patterns/stardust.png)')]"></div>
+        <div class="relative z-10">
+            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">Artículos Promocionales que <br/><span class="text-[#FF6600]">Destacan tu Marca</span></h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-slate-300">Audífonos, termos, libretas, morrales y cientos de artículos corporativos. Haz clic en la línea de productos que te interese para cotizar.</p>
+            <a href="#catalogo" class="inline-flex bg-[#FF6600] text-white font-bold py-3 px-8 rounded-full hover:bg-[#E65C00] transition-transform transform hover:scale-105 shadow-lg items-center gap-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                Ver Líneas de Productos
+            </a>
+        </div>
+    </section>
+
+    <!-- Categorías Superiores (Íconos de GitHub) -->
+    <section class="py-12 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-slate-900">Encuentra el regalo ideal</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer hover:border-[#FF6600]" onclick="filterCategory('Tecnología')">
+                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/TECNOLOGIA.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/TECNOLOGIA.png)" alt="Tecnología" class="h-12 w-auto mx-auto mb-3 object-contain">
+                    <h3 class="font-bold text-slate-800">Tecnología</h3>
+                </div>
+                <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer hover:border-[#FF6600]" onclick="filterCategory('Mugs y Termos')">
+                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/MUG.TERMOS.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/MUG.TERMOS.png)" alt="Mugs y Termos" class="h-12 w-auto mx-auto mb-3 object-contain">
+                    <h3 class="font-bold text-slate-800">Termos</h3>
+                </div>
+                <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer hover:border-[#FF6600]" onclick="filterCategory('Oficina')">
+                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/OFICINA.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/OFICINA.png)" alt="Oficina" class="h-12 w-auto mx-auto mb-3 object-contain">
+                    <h3 class="font-bold text-slate-800">Oficina</h3>
+                </div>
+                <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer hover:border-[#FF6600]" onclick="filterCategory('Bolsas y Mochilas')">
+                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/LINEA.ECO.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/LINEA.ECO.png)" alt="Bolsas y Mochilas" class="h-12 w-auto mx-auto mb-3 object-contain">
+                    <h3 class="font-bold text-slate-800">Línea Eco</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERÍA DE LÍNEAS DE PRODUCTO (IMÁGENES REALES) -->
+    <section id="catalogo" class="max-w-7xl mx-auto p-6 md:py-16 scroll-mt-20 bg-gray-50">
+        <h2 class="text-2xl md:text-4xl font-bold text-center mb-4 text-slate-900">Líneas de Productos Corporativos</h2>
+        <p class="text-center text-gray-500 mb-8 max-w-2xl mx-auto">Selecciona la línea de artículos que deseas para ver detalles y solicitar los modelos disponibles.</p>
+        
+        <!-- Botones de Filtro -->
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-10">
+            <div class="flex overflow-x-auto hide-scrollbar gap-2 w-full md:w-auto py-2" id="category-filters">
+                <button onclick="filterCategory('Todos')" class="cat-btn active whitespace-nowrap bg-[#FF6600] text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-colors shadow-sm">Ver Todo</button>
+                <button onclick="filterCategory('Oficina')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Oficina</button>
+                <button onclick="filterCategory('Tecnología')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Tecnología</button>
+                <button onclick="filterCategory('Mugs y Termos')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Termos</button>
+                <button onclick="filterCategory('Bolsas y Mochilas')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Mochilas</button>
+                <button onclick="filterCategory('Varios')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Varios</button>
+            </div>
+        </div>
+
+        <!-- Grid de Líneas de Producto -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Cargado por JS -->
+        </div>
+    </section>
+
+    <!-- VENTANA MODAL (LIGHTBOX) -->
+    <div id="lightbox" class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/90 backdrop-blur-sm p-4">
+        <div class="bg-white rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col md:flex-row relative modal-animate overflow-hidden">
+            <button onclick="closeModal()" class="absolute top-3 right-3 md:top-4 md:right-4 bg-white/80 hover:bg-white text-slate-900 rounded-full p-2 z-20 shadow-md transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <div class="md:w-1/2 bg-slate-100 flex items-center justify-center h-64 md:h-auto relative overflow-hidden">
+                <img id="modal-img" src="" alt="Vista ampliada" class="w-full h-full object-cover">
+            </div>
+            
+            <div class="md:w-1/2 p-6 md:p-10 flex flex-col justify-center overflow-y-auto">
+                <span id="modal-cat" class="text-[#FF6600] font-bold text-sm tracking-wider uppercase mb-2"></span>
+                <h2 id="modal-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4 leading-tight"></h2>
+                <p id="modal-desc" class="text-slate-600 mb-8 leading-relaxed text-sm md:text-base"></p>
+                
+                <a id="modal-wa" href="#" target="_blank" class="w-full text-center bg-green-500 text-white font-bold py-3.5 md:py-4 rounded-xl hover:bg-green-600 transition-transform transform hover:scale-105 flex justify-center items-center gap-3 shadow-lg shadow-green-500/30 text-lg">
+                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/whatsapp.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/whatsapp.png)" alt="WhatsApp" class="h-6 w-6 filter brightness-0 invert"> Solicitar Catálogo
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ¿Cómo funciona? -->
+    <section class="bg-slate-900 text-white py-16 border-t-4 border-[#FF6600]">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h2 class="text-2xl md:text-3xl font-bold mb-10">Tu pedido en 3 simples pasos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/N1.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/N1.png)" alt="Paso 1" class="h-16 w-auto mx-auto mb-4 object-contain">
+                    <h3 class="font-bold text-lg mb-2">Cotiza y Asesórate</h3>
+                    <p class="text-slate-300 text-sm">Contáctanos por WhatsApp. Te ayudamos a elegir el mejor producto para tu marca y presupuesto.</p>
+                </div>
+                <div>
+                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/N2.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/N2.png)" alt="Paso 2" class="h-16 w-auto mx-auto mb-4 object-contain">
+                    <h3 class="font-bold text-lg mb-2">Montaje y Aprobación</h3>
+                    <p class="text-slate-300 text-sm">Realizamos un fotomontaje digital con tu logo para que apruebes el diseño antes de marcar.</p>
+                </div>
+                <div>
+                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/N3.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/N3.png)" alt="Paso 3" class="h-16 w-auto mx-auto mb-4 object-contain">
+                    <h3 class="font-bold text-lg mb-2">Producción y Entrega</h3>
+                    <p class="text-slate-300 text-sm">Marcamos tus productos con alta calidad y los enviamos a la puerta de tu empresa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios / Confianza -->
+    <section class="bg-gray-100 py-12 border-t border-gray-200">
+        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-around items-center gap-8 px-4">
+            <div class="flex flex-col items-center text-center gap-3">
+                <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/ECO.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/ECO.png)" alt="Ecológico" class="h-12 w-auto">
+                <span class="font-bold text-slate-800">Línea Ecológica</span>
+                <p class="text-sm text-gray-500">Opciones amigables con el medio ambiente.</p>
+            </div>
+            <div class="flex flex-col items-center text-center gap-3">
+                <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/HORARIOS.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/HORARIOS.png)" alt="Horarios" class="h-12 w-auto">
+                <span class="font-bold text-slate-800">Atención Ágil</span>
+                <p class="text-sm text-gray-500">Respuesta rápida a tus requerimientos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-white text-center py-10 px-4 border-t-4 border-[#FF6600]">
+        <h3 class="font-bold text-lg mb-6 text-slate-300">Síguenos y haz tu pedido:</h3>
+        <div class="flex justify-center items-center gap-6 mb-8">
+            <a href="[https://www.instagram.com/pyjpromocionales/](https://www.instagram.com/pyjpromocionales/)" target="_blank" class="hover:scale-110 transition-transform">
+                <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/instagram.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/instagram.png)" alt="Instagram" class="h-8 w-8">
+            </a>
+            <a href="#" target="_blank" class="hover:scale-110 transition-transform">
+                <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/facebook.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/facebook.png)" alt="Facebook" class="h-8 w-8">
+            </a>
+            <a href="#" target="_blank" class="hover:scale-110 transition-transform">
+                <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/TIKTOK.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/TIKTOK.png)" alt="TikTok" class="h-8 w-8">
+            </a>
+            <a href="#" class="hover:scale-110 transition-transform">
+                <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/GMAIL.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/GMAIL.png)" alt="Email" class="h-8 w-8">
+            </a>
+        </div>
+        <div class="border-t border-slate-800 pt-6 max-w-sm mx-auto">
+            <p class="text-xs text-slate-500">© 2026 PyJ Promocionales. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT DE GALERÍA POR LÍNEA DE PRODUCTOS -->
+    <script>
+        // Array de Líneas de Producto con Imágenes Reales y de Calidad
+        const productLines = [
+            {
+                name: "Línea de Bolígrafos y Escritura",
+                desc: "Contamos con más de 30 referencias. Bolígrafos metálicos, plásticos, ecológicos (fibra de trigo o bambú), rollers ejecutivos, sets de regalo y resaltadores. Todo personalizable con tu logo.",
+                img: "[https://images.unsplash.com/photo-1585336261022-680e295ce3fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1585336261022-680e295ce3fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                cat: "Oficina"
+            },
+            {
+                name: "Libretas, Agendas y Notas",
+                desc: "Libretas ejecutivas en formato A5, modelos ecológicos en corcho, RPET o bambú, agendas semanales, blocs de notas y tacos tipo cubo con marcación láser o tampografía.",
+                img: "[https://images.unsplash.com/photo-1531346878377-a5be20888e57?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1531346878377-a5be20888e57?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                cat: "Oficina"
+            },
+            {
+                name: "Kits y Sets Ejecutivos",
+                desc: "Elegantes sets de regalo premium en cajas de presentación magnética. Incluyen combinaciones de libretas, bolígrafos, termos, llaveros y tarjeteros corporativos.",
+                img: "[https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                cat: "Oficina"
+            },
+            {
+                name: "Mugs y Tazas Corporativas",
+                desc: "Tazas de cerámica ideales para sublimación a todo color, mugs mágicos, tazas esmaltadas estilo retro/vintage y vasos de bambú para disfrutar bebidas calientes con estilo.",
+                img: "[https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                cat: "Mugs y Termos"
+            },
+            {
+                name: "Termos y Botellas Deportivas",
+                desc: "Extensa variedad de botellas en aluminio, termos de acero inoxidable con aislamiento al vacío de doble pared y cilindros ecológicos fabricados en plástico reciclado RPET.",
+                img: "[https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                cat: "Mugs y Termos"
+            },
+            {
+                name: "Bolsas Ecológicas y Totes",
+                desc: "Prácticas bolsas reutilizables fabricadas en algodón, yute natural, tela no tejida (kambrel) y PET. Son ideales para entregar en eventos, compras o kits de bienvenida.",
+                img: "[https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                cat: "Bolsas y Mochilas"
+            },
+            {
+                name: "Morrales, Maletines y Loncheras",
+                desc: "Mochilas ejecutivas con compartimento para portátil, morrales deportivos, bolsos manos libres y loncheras térmicas con un amplio espacio para marcar el diseño de tu empresa.",
+                img: "[https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                cat: "Bolsas y Mochilas"
+            },
+            {
+                name: "Tecnología, Audio y Gadgets",
+                desc: "Artículos tecnológicos modernos como audífonos Bluetooth de diadema o in-ear, parlantes inalámbricos, powerbanks, cargadores rápidos, mousepads y hubs multipuertos.",
+                img: "[https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                cat: "Tecnología"
+            },
+            {
+                name: "Llaveros y Destapadores",
+                desc: "Variedad de llaveros metálicos, modelos ecológicos en bambú, destapadores de aluminio coloridos y prácticos llaveros multifuncionales con herramientas integradas.",
+                img: "[https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                cat: "Varios"
+            },
+            {
+                name: "Herramientas y Multiusos",
+                desc: "Kits de herramientas súper compactos, linternas LED recargables, cintas métricas retráctiles, flexómetros y navajas multiusos para llevar en el auto o tener en casa.",
+                img: "[https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                cat: "Varios"
+            },
+            {
+                name: "Paraguas e Impermeables",
+                desc: "Artículos de protección para la lluvia: Paraguas tamaño golf, sombrillas compactas de apertura automática, modelos reversibles e impermeables con estuches personalizables.",
+                img: "[https://images.unsplash.com/photo-1518331539958-472e3895315d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1518331539958-472e3895315d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                cat: "Varios"
+            },
+            {
+                name: "Bienestar, Viajes y Antiestrés",
+                desc: "Pelotas y figuras antiestrés, kits de descanso para viaje, cobijas compactas, sets de coctelería para bar, juegos de mesa (ajedrez, dominó) y artículos de cuidado personal.",
+                img: "[https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                cat: "Varios"
+            }
+        ];
+
+        let currentFilter = 'Todos';
+
+        function renderProductLines() {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = '';
+            
+            const filtered = productLines.filter(p => currentFilter === 'Todos' || p.cat === currentFilter);
+
+            let htmlContent = '';
+            filtered.forEach((p, index) => {
+                const safeName = p.name.replace(/'/g, "\\'");
+                const safeDesc = p.desc.replace(/'/g, "\\'");
+                
+                htmlContent += `
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 group flex flex-col hover:-translate-y-1 cursor-pointer" onclick="openModal('${safeName}', '${p.cat}', '${safeDesc}', '${p.img}')">
+                    <div class="h-48 overflow-hidden relative bg-slate-100 flex items-center justify-center">
+                        <img src="${p.img}" alt="${p.name}" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-90 transition-all duration-500">
+                        <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                            <div class="bg-white/90 p-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg">
+                                <svg class="w-6 h-6 text-[#FF6600]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
                             </div>
                         </div>
-                        <div class="p-4 flex flex-col flex-grow text-center bg-white z-10">
-                            <span class="text-[#FF6600] text-[10px] font-bold tracking-wider uppercase mb-1">${p.cat}</span>
-                            <p class="text-xs text-gray-500 line-clamp-2 mt-1 px-1">${p.desc}</p>
-                        </div>
-                    </div>`;
-                });
-                grid.innerHTML = htmlContent;
-            }
+                    </div>
+                    <div class="p-5 flex flex-col flex-grow text-center">
+                        <span class="text-[#FF6600] text-[10px] font-bold tracking-wider uppercase mb-2">${p.cat}</span>
+                        <h3 class="font-bold text-slate-800 text-lg leading-tight group-hover:text-[#FF6600] transition-colors">${p.name}</h3>
+                    </div>
+                </div>`;
+            });
+            grid.innerHTML = htmlContent;
         }
-
-        function searchProducts() { currentSearch = document.getElementById('searchInput').value; renderProducts(); }
 
         function filterCategory(category) {
             currentFilter = category;
@@ -658,32 +628,19 @@
                 }
             });
             if(category !== 'Todos') document.getElementById('catalogo').scrollIntoView({ behavior: 'smooth' }); 
-            renderProducts();
+            renderProductLines();
         }
 
-        // Lógica del Lightbox (Ventana Modal Dinámica)
-        function openModal(index) {
-            const p = filteredProductsCache[index];
+        function openModal(name, cat, desc, imgUrl) {
             const modal = document.getElementById('lightbox');
-            const iconSVG = getIconSVG(p.name);
+            document.getElementById('modal-img').src = imgUrl;
+            document.getElementById('modal-title').innerText = name;
+            document.getElementById('modal-cat').innerText = 'Categoría: ' + cat;
+            document.getElementById('modal-desc').innerText = desc;
             
-            // Inyectar el mockup ampliado en la ventana emergente
-            document.getElementById('modal-image-container').innerHTML = `
-                <div class="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 flex flex-col items-center justify-center p-8 text-center relative shadow-inner">
-                    <div class="text-[#FF6600] mb-6 opacity-90 transform scale-150 drop-shadow-md">
-                        ${iconSVG}
-                    </div>
-                    <h3 class="text-white font-extrabold text-2xl md:text-3xl leading-tight px-4 z-10 drop-shadow-md">${p.name}</h3>
-                    <div class="absolute bottom-4 right-4 opacity-10 text-white font-black text-6xl">PyJ</div>
-                </div>
-            `;
-            
-            document.getElementById('modal-title').innerText = p.name;
-            document.getElementById('modal-ref').innerText = 'Referencia: ' + p.ref;
-            document.getElementById('modal-desc').innerText = p.desc;
-            
-            const message = `Hola, vengo del catálogo web y quiero cotizar el producto: ${p.name} (Ref: ${p.ref}).`;
-            document.getElementById('modal-wa').href = `https://wa.me/573202814844?text=${encodeURIComponent(message)}`;
+            // Texto adaptado para pedir el catálogo de esa línea específica
+            const message = `Hola, vengo de su página web y me gustaría recibir el catálogo y cotizar productos de la: ${name}.`;
+            document.getElementById('modal-wa').href = `[https://wa.me/573202814844?text=$](https://wa.me/573202814844?text=$){encodeURIComponent(message)}`;
             
             modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
@@ -698,7 +655,7 @@
             if (e.target === this) closeModal();
         });
 
-        window.onload = renderProducts;
+        window.onload = renderProductLines;
     </script>
 </body>
 </html>
