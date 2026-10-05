@@ -9,6 +9,8 @@
     <style>
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Animación suave para la ventana de la galería */
         @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
         .modal-animate { animation: fadeIn 0.3s ease-out forwards; }
     </style>
@@ -30,15 +32,15 @@
         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
         <div class="relative z-10">
             <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">Artículos Promocionales que <br/><span class="text-[#FF6600]">Destacan tu Marca</span></h1>
-            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-slate-300">Explora nuestras líneas de productos corporativos. Personalizamos cada detalle con calidad y cumplimiento garantizados.</p>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-slate-300">Audífonos, termos, libretas, morrales y cientos de artículos corporativos. Haz clic en la línea de productos que te interese para cotizar.</p>
             <a href="#catalogo" class="inline-flex bg-[#FF6600] text-white font-bold py-3 px-8 rounded-full hover:bg-[#E65C00] transition-transform transform hover:scale-105 shadow-lg items-center gap-2">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-                Ver Líneas de Producto
+                Ver Líneas de Productos
             </a>
         </div>
     </section>
 
-    <!-- Categorías Superiores -->
+    <!-- Categorías Superiores (Íconos de GitHub) -->
     <section class="py-12 bg-white">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-slate-900">Encuentra el regalo ideal</h2>
@@ -56,40 +58,33 @@
                     <h3 class="font-bold text-slate-800">Oficina</h3>
                 </div>
                 <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer hover:border-[#FF6600]" onclick="filterCategory('Bolsas y Mochilas')">
-                    <img src="https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/LINEA.ECO.png" alt="Línea Eco" class="h-12 w-auto mx-auto mb-3 object-contain">
+                    <img src="https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/LINEA.ECO.png" alt="Bolsas y Mochilas" class="h-12 w-auto mx-auto mb-3 object-contain">
                     <h3 class="font-bold text-slate-800">Línea Eco</h3>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- GALERÍA POR LÍNEAS DE PRODUCTO -->
+    <!-- GALERÍA DE LÍNEAS DE PRODUCTO (CADA RECUADRO CON IMAGEN) -->
     <section id="catalogo" class="max-w-7xl mx-auto p-6 md:py-16 scroll-mt-20 bg-gray-50">
-        <h2 class="text-2xl md:text-4xl font-bold text-center mb-4 text-slate-900">Líneas de Producto</h2>
-        <p class="text-center text-gray-500 mb-8 max-w-2xl mx-auto">Selecciona la categoría de tu interés para conocer las opciones y solicitar el catálogo completo de esa línea.</p>
+        <h2 class="text-2xl md:text-4xl font-bold text-center mb-4 text-slate-900">Líneas de Productos Corporativos</h2>
+        <p class="text-center text-gray-500 mb-8 max-w-2xl mx-auto">Selecciona la línea de artículos que deseas para ver detalles y solicitar los modelos disponibles.</p>
         
-        <!-- Filtros Horizontales -->
-        <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-10">
+        <!-- Botones de Filtro -->
+        <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-10">
             <div class="flex overflow-x-auto hide-scrollbar gap-2 w-full md:w-auto py-2" id="category-filters">
                 <button onclick="filterCategory('Todos')" class="cat-btn active whitespace-nowrap bg-[#FF6600] text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-colors shadow-sm">Ver Todo</button>
                 <button onclick="filterCategory('Oficina')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Oficina</button>
                 <button onclick="filterCategory('Tecnología')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Tecnología</button>
                 <button onclick="filterCategory('Mugs y Termos')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Mugs & Termos</button>
                 <button onclick="filterCategory('Bolsas y Mochilas')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Bolsas & Mochilas</button>
-                <button onclick="filterCategory('Lifestyle')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Lifestyle & Varios</button>
-            </div>
-            <div class="w-full md:w-80 shrink-0">
-                <input type="text" id="searchInput" onkeyup="searchProducts()" placeholder="Buscar línea, ej: bolígrafos..." class="w-full pl-5 pr-5 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FF6600] shadow-sm">
+                <button onclick="filterCategory('Varios')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Varios</button>
             </div>
         </div>
 
-        <!-- Grid de la Galería -->
-        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            <!-- Los productos cargarán aquí vía JS -->
-        </div>
-        
-        <div id="no-results" class="hidden text-center py-16 text-gray-500 text-lg">
-            No encontramos esa línea de producto. <br/><span class="text-sm">Intenta buscar de forma más general.</span>
+        <!-- Grid de Líneas de Producto -->
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- Cargado por JS -->
         </div>
     </section>
 
@@ -179,407 +174,80 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DE GALERÍA POR LÍNEAS -->
+    <!-- SCRIPT DE GALERÍA (100% IMÁGENES CUBIERTAS) -->
     <script>
-        // Base de datos de Líneas de Producto con Imágenes Representativas de Alta Calidad
-        const productLines = [
-            { 
-                name: "Línea de Bolígrafos", 
-                cat: "Oficina", 
-                desc: "Contamos con una amplia variedad de bolígrafos plásticos, metálicos, ecológicos en fibra de trigo, con función stylus y estuches ejecutivos. Ideales para el uso diario o regalos premium.", 
-                img: "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            },
-            { 
-                name: "Libretas y Agendas", 
-                cat: "Oficina", 
-                desc: "Agendas ejecutivas, libretas argolladas, opciones en RPET, corcho y bambú. Perfecto para mantener tu marca presente en reuniones y escritorios.", 
-                img: "https://images.unsplash.com/photo-1544816155-12df9643f363?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            },
-            { 
-                name: "Sets de Oficina y Memos", 
-                cat: "Oficina", 
-                desc: "Kits de escritorio, resaltadores con diseños originales, tacos de notas adheribles y artículos funcionales para organizar el espacio de trabajo.", 
-                img: "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            },
-            { 
-                name: "Termos y Botellas", 
-                cat: "Mugs y Termos", 
-                desc: "Botellas deportivas en plástico reciclado, cilindros de aluminio, y termos de acero inoxidable de doble pared para conservar la temperatura ideal de tus bebidas.", 
-                img: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            },
-            { 
-                name: "Mugs y Tazas", 
-                cat: "Mugs y Termos", 
-                desc: "Mugs cerámicos clásicos, mágicos para sublimación, tazas esmaltadas estilo retro y vasos con exterior de bambú o recubrimiento plástico.", 
-                img: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            },
-            { 
-                name: "Morrales y Mochilas", 
-                cat: "Bolsas y Mochilas", 
-                desc: "Morrales ejecutivos porta laptop, opciones de seguridad antirrobo y mochilas tipo tula deportivas perfectas para eventos y congresos.", 
-                img: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            },
-            { 
-                name: "Bolsas Ecológicas", 
-                cat: "Bolsas y Mochilas", 
-                desc: "Tote bags en algodón, yute y poliéster reciclado. Opciones duraderas, lavables y con amplia área de marcación para visibilizar tu logotipo.", 
-                img: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            },
-            { 
-                name: "Loncheras y Manos Libres", 
-                cat: "Bolsas y Mochilas", 
-                desc: "Loncheras térmicas para conservar alimentos, canguros y bolsos manos libres funcionales para el uso diario de tus colaboradores.", 
-                img: "https://images.unsplash.com/photo-1547949003-9792a18a2601?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            },
-            { 
-                name: "Audífonos y Audio", 
-                cat: "Tecnología", 
-                desc: "Audífonos Bluetooth de diadema o in-ear con estuches cargadores, y bocinas/altavoces inalámbricos de alta definición para el entretenimiento.", 
-                img: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            },
-            { 
-                name: "Gadgets y Cargadores", 
-                cat: "Tecnología", 
-                desc: "Baterías portátiles (Powerbanks), cables multicargadores, mouse inalámbricos y estaciones de carga rápida para mantenerse conectado.", 
-                img: "https://images.unsplash.com/photo-1528032733973-2e061806cc26?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            },
-            { 
-                name: "Herramientas y Linternas", 
-                cat: "Varios", 
-                desc: "Kits de herramientas compactos, flexómetros, navajas multiusos y linternas LED recargables o solares. Regalos funcionales de gran durabilidad.", 
-                img: "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            },
-            { 
-                name: "Sets de Bar y Coctelería", 
-                cat: "Varios", 
-                desc: "Elegantes sets de vino en cajas de bambú, kits de coctelería profesional, licoreras y tablas de quesos para regalos de alto perfil corporativo.", 
-                img: "https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            },
-            { 
-                name: "Llaveros y Destapadores", 
-                cat: "Varios", 
-                desc: "Llaveros metálicos, modelos con destapador incorporado, diseños divertidos y soportes para gafetes o carnets corporativos.", 
-                img: "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            },
-            { 
-                name: "Paraguas e Impermeables", 
-                cat: "Varios", 
-                desc: "Paraguas ejecutivos de apertura automática, modelos compactos, sombrillas reversibles y prácticos impermeables empacables.", 
-                img: "https://images.unsplash.com/photo-1554559591-1fb894fec92c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            },
-            { 
-                name: "Viaje y Cuidado Personal", 
-                cat: "Lifestyle", 
-                desc: "Cosmetiqueras, espejos portátiles, cobijas de viaje, pastilleros organizadores y sets para limpieza facial y relajación.", 
-                img: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            },
-            { 
-                name: "Antiestrés y Entretenimiento", 
-                cat: "Lifestyle", 
-                desc: "Figuras antiestrés de diferentes formas (corazones, balones, nubes) y elegantes sets de juegos de mesa (dominó, cartas, jenga).", 
-                img: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-            }
-        ];
-
-        const grid = document.getElementById('product-grid');
-        const noResults = document.getElementById('no-results');
-        let currentFilter = 'Todos';
-        let currentSearch = '';
-        let filteredLinesCache = []; 
-
-        function renderProducts() {
-            grid.innerHTML = '';
-            
-            filteredLinesCache = productLines.filter(p => {
-                const matchCategory = currentFilter === 'Todos' || p.cat === currentFilter || (currentFilter === 'Lifestyle' && p.cat === 'Varios');
-                const matchSearch = p.name.toLowerCase().includes(currentSearch.toLowerCase()) || p.desc.toLowerCase().includes(currentSearch.toLowerCase());
-                return matchCategory && matchSearch;
-            });
-
-            if (filteredLinesCache.length === 0) {
-                noResults.classList.remove('hidden');
-            } else {
-                noResults.classList.add('hidden');
-                
-                let htmlContent = '';
-                filteredLinesCache.forEach((p, index) => {
-                    const safeName = p.name.replace(/'/g, "\\'");
-                    const safeDesc = p.desc.replace(/'/g, "\\'");
-                    
-                    htmlContent += `
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 group flex flex-col hover:-translate-y-1 cursor-pointer" onclick="openModal(${index})">
-                        <div class="h-48 sm:h-56 overflow-hidden relative bg-slate-100 flex items-center justify-center">
-                            <img src="${p.img}" alt="${p.name}" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-90 transition-all duration-500">
-                            
-                            <!-- Etiqueta de Categoría -->
-                            <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-slate-800 text-[11px] font-bold px-3 py-1.5 rounded-lg shadow-sm border border-gray-100">${p.cat === 'Varios' ? 'Lifestyle' : p.cat}</div>
-                            
-                            <!-- Overlay de Ampliar -->
-                            <div class="absolute inset-0 bg-slate-900/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <div class="bg-white p-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl">
-                                    <svg class="w-6 h-6 text-[#FF6600]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path¡Tienes toda la razón, Micha! Listar 130 productos uno por uno hace que la página sea demasiado larga y aburrida de navegar para el cliente. 
-
-Tu idea es la más inteligente y la mejor práctica en diseño web corporativo: **Agrupar el catálogo por "Tipos o Líneas de Producto"**. 
-
-He rediseñado la galería para mostrar **solo una tarjeta por tipo de producto** (una de Bolígrafos, una de Libretas, una de Termos, una de Mochilas, etc.). A cada tipo le he asignado una **fotografía real, libre de derechos y de altísima calidad** que representa a la perfección esa categoría. 
-
-De esta forma:
-1. La página queda mucho más corta, limpia y elegante.
-2. Todo tiene una imagen real que llama la atención.
-3. Al hacer clic en "Bolígrafos", por ejemplo, se abre la ventana ampliada y el botón de WhatsApp dirá *"Hola, quiero cotizar la línea de Bolígrafos y Escritura"*, lo que te permite a ti enviarles por chat las opciones exactas que tienes disponibles según su presupuesto.
-
-Aquí tienes el código definitivo y optimizado:
-
-```html
-<!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PyJ Promocionales | Catálogo Corporativo</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
-    <style>
-        .hide-scrollbar::-webkit-scrollbar { display: none; }
-        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        /* Animación suave para la ventana de la galería */
-        @keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
-        .modal-animate { animation: fadeIn 0.3s ease-out forwards; }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans antialiased">
-
-    <!-- Header Fijo -->
-    <header class="bg-white shadow-sm p-4 flex justify-between items-center sticky top-0 z-50">
-        <a href="[https://www.instagram.com/pyjpromocionales/](https://www.instagram.com/pyjpromocionales/)" target="_blank">
-            <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/PyJ.PRINCIPAL.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/PyJ.PRINCIPAL.png)" alt="PyJ Promocionales" class="h-10 md:h-12 w-auto">
-        </a>
-        <a href="[https://wa.me/573202814844](https://wa.me/573202814844)" target="_blank" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-5 rounded-full flex items-center gap-2 transition-colors shadow-md">
-            <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/whatsapp.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/whatsapp.png)" alt="WhatsApp" class="h-5 w-5"> Cotizar
-        </a>
-    </header>
-
-    <!-- Sección Hero -->
-    <section class="flex flex-col items-center text-center p-8 md:p-20 bg-slate-900 text-white relative overflow-hidden border-b-4 border-[#FF6600]">
-        <div class="absolute inset-0 opacity-10 bg-[url('[https://www.transparenttextures.com/patterns/stardust.png](https://www.transparenttextures.com/patterns/stardust.png)')]"></div>
-        <div class="relative z-10">
-            <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">Artículos Promocionales que <br/><span class="text-[#FF6600]">Destacan tu Marca</span></h1>
-            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-slate-300">Audífonos, termos, libretas, morrales y cientos de artículos corporativos. Haz clic en la línea de productos que te interese para cotizar.</p>
-            <a href="#catalogo" class="inline-flex bg-[#FF6600] text-white font-bold py-3 px-8 rounded-full hover:bg-[#E65C00] transition-transform transform hover:scale-105 shadow-lg items-center gap-2">
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-                Ver Líneas de Productos
-            </a>
-        </div>
-    </section>
-
-    <!-- Categorías Superiores (Íconos de GitHub) -->
-    <section class="py-12 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-2xl md:text-3xl font-bold text-center mb-10 text-slate-900">Encuentra el regalo ideal</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer hover:border-[#FF6600]" onclick="filterCategory('Tecnología')">
-                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/TECNOLOGIA.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/TECNOLOGIA.png)" alt="Tecnología" class="h-12 w-auto mx-auto mb-3 object-contain">
-                    <h3 class="font-bold text-slate-800">Tecnología</h3>
-                </div>
-                <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer hover:border-[#FF6600]" onclick="filterCategory('Mugs y Termos')">
-                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/MUG.TERMOS.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/MUG.TERMOS.png)" alt="Mugs y Termos" class="h-12 w-auto mx-auto mb-3 object-contain">
-                    <h3 class="font-bold text-slate-800">Termos</h3>
-                </div>
-                <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer hover:border-[#FF6600]" onclick="filterCategory('Oficina')">
-                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/OFICINA.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/OFICINA.png)" alt="Oficina" class="h-12 w-auto mx-auto mb-3 object-contain">
-                    <h3 class="font-bold text-slate-800">Oficina</h3>
-                </div>
-                <div class="p-6 bg-white border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition cursor-pointer hover:border-[#FF6600]" onclick="filterCategory('Bolsas y Mochilas')">
-                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/LINEA.ECO.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/LINEA.ECO.png)" alt="Bolsas y Mochilas" class="h-12 w-auto mx-auto mb-3 object-contain">
-                    <h3 class="font-bold text-slate-800">Línea Eco</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- GALERÍA DE LÍNEAS DE PRODUCTO (IMÁGENES REALES) -->
-    <section id="catalogo" class="max-w-7xl mx-auto p-6 md:py-16 scroll-mt-20 bg-gray-50">
-        <h2 class="text-2xl md:text-4xl font-bold text-center mb-4 text-slate-900">Líneas de Productos Corporativos</h2>
-        <p class="text-center text-gray-500 mb-8 max-w-2xl mx-auto">Selecciona la línea de artículos que deseas para ver detalles y solicitar los modelos disponibles.</p>
-        
-        <!-- Botones de Filtro -->
-        <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-10">
-            <div class="flex overflow-x-auto hide-scrollbar gap-2 w-full md:w-auto py-2" id="category-filters">
-                <button onclick="filterCategory('Todos')" class="cat-btn active whitespace-nowrap bg-[#FF6600] text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-colors shadow-sm">Ver Todo</button>
-                <button onclick="filterCategory('Oficina')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Oficina</button>
-                <button onclick="filterCategory('Tecnología')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Tecnología</button>
-                <button onclick="filterCategory('Mugs y Termos')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Termos</button>
-                <button onclick="filterCategory('Bolsas y Mochilas')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Mochilas</button>
-                <button onclick="filterCategory('Varios')" class="cat-btn whitespace-nowrap bg-white text-slate-600 border border-gray-200 hover:border-[#FF6600] px-5 py-2.5 rounded-full text-sm font-semibold transition-colors">Varios</button>
-            </div>
-        </div>
-
-        <!-- Grid de Líneas de Producto -->
-        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            <!-- Cargado por JS -->
-        </div>
-    </section>
-
-    <!-- VENTANA MODAL (LIGHTBOX) -->
-    <div id="lightbox" class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-slate-900/90 backdrop-blur-sm p-4">
-        <div class="bg-white rounded-2xl w-full max-w-4xl max-h-[90vh] flex flex-col md:flex-row relative modal-animate overflow-hidden">
-            <button onclick="closeModal()" class="absolute top-3 right-3 md:top-4 md:right-4 bg-white/80 hover:bg-white text-slate-900 rounded-full p-2 z-20 shadow-md transition-colors">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            
-            <div class="md:w-1/2 bg-slate-100 flex items-center justify-center h-64 md:h-auto relative overflow-hidden">
-                <img id="modal-img" src="" alt="Vista ampliada" class="w-full h-full object-cover">
-            </div>
-            
-            <div class="md:w-1/2 p-6 md:p-10 flex flex-col justify-center overflow-y-auto">
-                <span id="modal-cat" class="text-[#FF6600] font-bold text-sm tracking-wider uppercase mb-2"></span>
-                <h2 id="modal-title" class="text-2xl md:text-3xl font-extrabold text-slate-900 mb-4 leading-tight"></h2>
-                <p id="modal-desc" class="text-slate-600 mb-8 leading-relaxed text-sm md:text-base"></p>
-                
-                <a id="modal-wa" href="#" target="_blank" class="w-full text-center bg-green-500 text-white font-bold py-3.5 md:py-4 rounded-xl hover:bg-green-600 transition-transform transform hover:scale-105 flex justify-center items-center gap-3 shadow-lg shadow-green-500/30 text-lg">
-                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/whatsapp.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/whatsapp.png)" alt="WhatsApp" class="h-6 w-6 filter brightness-0 invert"> Solicitar Catálogo
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <!-- ¿Cómo funciona? -->
-    <section class="bg-slate-900 text-white py-16 border-t-4 border-[#FF6600]">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold mb-10">Tu pedido en 3 simples pasos</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div>
-                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/N1.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/N1.png)" alt="Paso 1" class="h-16 w-auto mx-auto mb-4 object-contain">
-                    <h3 class="font-bold text-lg mb-2">Cotiza y Asesórate</h3>
-                    <p class="text-slate-300 text-sm">Contáctanos por WhatsApp. Te ayudamos a elegir el mejor producto para tu marca y presupuesto.</p>
-                </div>
-                <div>
-                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/N2.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/N2.png)" alt="Paso 2" class="h-16 w-auto mx-auto mb-4 object-contain">
-                    <h3 class="font-bold text-lg mb-2">Montaje y Aprobación</h3>
-                    <p class="text-slate-300 text-sm">Realizamos un fotomontaje digital con tu logo para que apruebes el diseño antes de marcar.</p>
-                </div>
-                <div>
-                    <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/N3.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/N3.png)" alt="Paso 3" class="h-16 w-auto mx-auto mb-4 object-contain">
-                    <h3 class="font-bold text-lg mb-2">Producción y Entrega</h3>
-                    <p class="text-slate-300 text-sm">Marcamos tus productos con alta calidad y los enviamos a la puerta de tu empresa.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Beneficios / Confianza -->
-    <section class="bg-gray-100 py-12 border-t border-gray-200">
-        <div class="max-w-4xl mx-auto flex flex-col md:flex-row justify-around items-center gap-8 px-4">
-            <div class="flex flex-col items-center text-center gap-3">
-                <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/ECO.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/ECO.png)" alt="Ecológico" class="h-12 w-auto">
-                <span class="font-bold text-slate-800">Línea Ecológica</span>
-                <p class="text-sm text-gray-500">Opciones amigables con el medio ambiente.</p>
-            </div>
-            <div class="flex flex-col items-center text-center gap-3">
-                <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/HORARIOS.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/HORARIOS.png)" alt="Horarios" class="h-12 w-auto">
-                <span class="font-bold text-slate-800">Atención Ágil</span>
-                <p class="text-sm text-gray-500">Respuesta rápida a tus requerimientos.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-slate-950 text-white text-center py-10 px-4 border-t-4 border-[#FF6600]">
-        <h3 class="font-bold text-lg mb-6 text-slate-300">Síguenos y haz tu pedido:</h3>
-        <div class="flex justify-center items-center gap-6 mb-8">
-            <a href="[https://www.instagram.com/pyjpromocionales/](https://www.instagram.com/pyjpromocionales/)" target="_blank" class="hover:scale-110 transition-transform">
-                <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/instagram.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/instagram.png)" alt="Instagram" class="h-8 w-8">
-            </a>
-            <a href="#" target="_blank" class="hover:scale-110 transition-transform">
-                <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/facebook.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/facebook.png)" alt="Facebook" class="h-8 w-8">
-            </a>
-            <a href="#" target="_blank" class="hover:scale-110 transition-transform">
-                <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/TIKTOK.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/reimgenespyj/TIKTOK.png)" alt="TikTok" class="h-8 w-8">
-            </a>
-            <a href="#" class="hover:scale-110 transition-transform">
-                <img src="[https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/GMAIL.png](https://raw.githubusercontent.com/portalwebempresarial/pyjpromocionales/main/GMAIL.png)" alt="Email" class="h-8 w-8">
-            </a>
-        </div>
-        <div class="border-t border-slate-800 pt-6 max-w-sm mx-auto">
-            <p class="text-xs text-slate-500">© 2026 PyJ Promocionales. Todos los derechos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- SCRIPT DE GALERÍA POR LÍNEA DE PRODUCTOS -->
-    <script>
-        // Array de Líneas de Producto con Imágenes Reales y de Calidad
+        // Array de Líneas de Producto, cada una con su imagen HD de Unsplash
         const productLines = [
             {
                 name: "Línea de Bolígrafos y Escritura",
                 desc: "Contamos con más de 30 referencias. Bolígrafos metálicos, plásticos, ecológicos (fibra de trigo o bambú), rollers ejecutivos, sets de regalo y resaltadores. Todo personalizable con tu logo.",
-                img: "[https://images.unsplash.com/photo-1585336261022-680e295ce3fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1585336261022-680e295ce3fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                img: "https://images.unsplash.com/photo-1585336261022-680e295ce3fe?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                 cat: "Oficina"
             },
             {
                 name: "Libretas, Agendas y Notas",
                 desc: "Libretas ejecutivas en formato A5, modelos ecológicos en corcho, RPET o bambú, agendas semanales, blocs de notas y tacos tipo cubo con marcación láser o tampografía.",
-                img: "[https://images.unsplash.com/photo-1531346878377-a5be20888e57?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1531346878377-a5be20888e57?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                img: "https://images.unsplash.com/photo-1531346878377-a5be20888e57?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                 cat: "Oficina"
             },
             {
                 name: "Kits y Sets Ejecutivos",
                 desc: "Elegantes sets de regalo premium en cajas de presentación magnética. Incluyen combinaciones de libretas, bolígrafos, termos, llaveros y tarjeteros corporativos.",
-                img: "[https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                img: "https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                 cat: "Oficina"
             },
             {
                 name: "Mugs y Tazas Corporativas",
                 desc: "Tazas de cerámica ideales para sublimación a todo color, mugs mágicos, tazas esmaltadas estilo retro/vintage y vasos de bambú para disfrutar bebidas calientes con estilo.",
-                img: "[https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                img: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                 cat: "Mugs y Termos"
             },
             {
                 name: "Termos y Botellas Deportivas",
                 desc: "Extensa variedad de botellas en aluminio, termos de acero inoxidable con aislamiento al vacío de doble pared y cilindros ecológicos fabricados en plástico reciclado RPET.",
-                img: "[https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                img: "https://images.unsplash.com/photo-1602143407151-7111542de6e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                 cat: "Mugs y Termos"
             },
             {
                 name: "Bolsas Ecológicas y Totes",
                 desc: "Prácticas bolsas reutilizables fabricadas en algodón, yute natural, tela no tejida (kambrel) y PET. Son ideales para entregar en eventos, compras o kits de bienvenida.",
-                img: "[https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                img: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                 cat: "Bolsas y Mochilas"
             },
             {
                 name: "Morrales, Maletines y Loncheras",
                 desc: "Mochilas ejecutivas con compartimento para portátil, morrales deportivos, bolsos manos libres y loncheras térmicas con un amplio espacio para marcar el diseño de tu empresa.",
-                img: "[https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                img: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                 cat: "Bolsas y Mochilas"
             },
             {
                 name: "Tecnología, Audio y Gadgets",
                 desc: "Artículos tecnológicos modernos como audífonos Bluetooth de diadema o in-ear, parlantes inalámbricos, powerbanks, cargadores rápidos, mousepads y hubs multipuertos.",
-                img: "[https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                img: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                 cat: "Tecnología"
             },
             {
                 name: "Llaveros y Destapadores",
                 desc: "Variedad de llaveros metálicos, modelos ecológicos en bambú, destapadores de aluminio coloridos y prácticos llaveros multifuncionales con herramientas integradas.",
-                img: "[https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                img: "https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                 cat: "Varios"
             },
             {
                 name: "Herramientas y Multiusos",
                 desc: "Kits de herramientas súper compactos, linternas LED recargables, cintas métricas retráctiles, flexómetros y navajas multiusos para llevar en el auto o tener en casa.",
-                img: "[https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                img: "https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                 cat: "Varios"
             },
             {
                 name: "Paraguas e Impermeables",
                 desc: "Artículos de protección para la lluvia: Paraguas tamaño golf, sombrillas compactas de apertura automática, modelos reversibles e impermeables con estuches personalizables.",
-                img: "[https://images.unsplash.com/photo-1518331539958-472e3895315d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1518331539958-472e3895315d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                img: "https://images.unsplash.com/photo-1518331539958-472e3895315d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                 cat: "Varios"
             },
             {
-                name: "Bienestar, Viajes y Antiestrés",
-                desc: "Pelotas y figuras antiestrés, kits de descanso para viaje, cobijas compactas, sets de coctelería para bar, juegos de mesa (ajedrez, dominó) y artículos de cuidado personal.",
-                img: "[https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80](https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80)",
+                name: "Sets de Bar y Coctelería",
+                desc: "Elegantes sets de vino en cajas de bambú, kits de coctelería profesional, licoreras y tablas de quesos para regalos de alto perfil corporativo.",
+                img: "https://images.unsplash.com/photo-1516997121675-4c2d1684aa3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
                 cat: "Varios"
             }
         ];
@@ -600,7 +268,9 @@ Aquí tienes el código definitivo y optimizado:
                 htmlContent += `
                 <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 group flex flex-col hover:-translate-y-1 cursor-pointer" onclick="openModal('${safeName}', '${p.cat}', '${safeDesc}', '${p.img}')">
                     <div class="h-48 overflow-hidden relative bg-slate-100 flex items-center justify-center">
+                        <!-- LA IMAGEN DEL PRODUCTO ESTÁ AQUÍ -->
                         <img src="${p.img}" alt="${p.name}" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-90 transition-all duration-500">
+                        
                         <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                             <div class="bg-white/90 p-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-lg">
                                 <svg class="w-6 h-6 text-[#FF6600]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
@@ -635,12 +305,11 @@ Aquí tienes el código definitivo y optimizado:
             const modal = document.getElementById('lightbox');
             document.getElementById('modal-img').src = imgUrl;
             document.getElementById('modal-title').innerText = name;
-            document.getElementById('modal-cat').innerText = 'Categoría: ' + cat;
+            document.getElementById('modal-cat').innerText = 'Línea de Categoría: ' + cat;
             document.getElementById('modal-desc').innerText = desc;
             
-            // Texto adaptado para pedir el catálogo de esa línea específica
-            const message = `Hola, vengo de su página web y me gustaría recibir el catálogo y cotizar productos de la: ${name}.`;
-            document.getElementById('modal-wa').href = `[https://wa.me/573202814844?text=$](https://wa.me/573202814844?text=$){encodeURIComponent(message)}`;
+            const message = `Hola, vengo de su página web y me gustaría recibir el catálogo de la: ${name}.`;
+            document.getElementById('modal-wa').href = `https://wa.me/573202814844?text=${encodeURIComponent(message)}`;
             
             modal.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
