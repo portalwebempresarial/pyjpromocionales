@@ -32,7 +32,7 @@
         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
         <div class="relative z-10">
             <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">Catálogo de Artículos que <br/><span class="text-[#FF6600]">Destacan tu Marca</span></h1>
-            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-slate-300">Audífonos, termos, libretas, morrales y cientos de artículos corporativos. Haz clic en cualquier artículo para ampliarlo y solicitar cotización.</p>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto text-slate-300">Audífonos, termos, libretas, morrales y cientos de artículos corporativos. Haz clic en cualquier artículo para conocer sus detalles y solicitar cotización.</p>
             <a href="#catalogo" class="inline-flex bg-[#FF6600] text-white font-bold py-3 px-8 rounded-full hover:bg-[#E65C00] transition-transform transform hover:scale-105 shadow-lg items-center gap-2">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
                 Abrir Galería Completa
@@ -65,10 +65,10 @@
         </div>
     </section>
 
-    <!-- GALERÍA DINÁMICA CON IMÁGENES AUTOMÁTICAS -->
+    <!-- GALERÍA DINÁMICA (MOCKUPS AUTOMÁTICOS) -->
     <section id="catalogo" class="max-w-7xl mx-auto p-6 md:py-16 scroll-mt-20 bg-gray-50">
-        <h2 class="text-2xl md:text-4xl font-bold text-center mb-4 text-slate-900">Galería de Productos</h2>
-        <p class="text-center text-gray-500 mb-8 max-w-2xl mx-auto">Selecciona cualquier imagen para ampliarla y ver sus especificaciones.</p>
+        <h2 class="text-2xl md:text-4xl font-bold text-center mb-4 text-slate-900">Catálogo General</h2>
+        <p class="text-center text-gray-500 mb-8 max-w-2xl mx-auto">Selecciona cualquier recuadro para ampliar las especificaciones del artículo.</p>
         
         <!-- Barra de búsqueda y Filtros Horizontales -->
         <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-10">
@@ -101,8 +101,9 @@
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
             </button>
             
-            <div class="md:w-1/2 bg-slate-100 flex items-center justify-center h-64 md:h-auto relative overflow-hidden">
-                <img id="modal-img" src="" alt="Vista ampliada" class="w-full h-full object-cover">
+            <!-- Contenedor del Mockup Gráfico Dinámico -->
+            <div id="modal-image-container" class="md:w-1/2 flex items-center justify-center h-64 md:h-auto relative overflow-hidden">
+                <!-- Se inyecta desde JS -->
             </div>
             
             <div class="md:w-1/2 p-6 md:p-10 flex flex-col justify-center overflow-y-auto">
@@ -163,47 +164,49 @@
         </div>
     </footer>
 
-    <!-- SCRIPT DE GALERÍA INTELIGENTE -->
+    <!-- SCRIPT DE CATÁLOGO: MOCKUPS DINÁMICOS -->
     <script>
-        // Bancos de imágenes Premium de Unsplash agrupados por palabras clave
-        const imagePools = {
-            'boligrafo': ['1583337130417-3346a1be7dee', '1585336261022-680e295ce3fe', '1522881113591-b54f866f314b', '1568822617270-2c1579f8dfe2', '1580582035123-5e92ef3e54fa'],
-            'libreta': ['1544816155-12df9643f363', '1531346878377-a5be20888e57', '1517842645767-c639042777db', '1571401831393-270d4c1bc4b5', '1501504905252-473c47e087f8'],
-            'botella': ['1602143407151-7111542de6e8', '1523362628745-0c100150b504', '1544911855-f26f2aa46d5c', '1620916566398-39f1143ab7be'],
-            'taza': ['1514228742587-6b1558fcca3d', '1577083165243-73130d22abce', '1517256064527-09c73fc73e38', '1572119854480-1a6bc6b0d956'],
-            'mochila': ['1553062407-98eeb64c6a62', '1622560480605-d83c853bc5c3'],
-            'bolso': ['1590874103328-eac38a683ce7', '1547949003-9792a18a2601'],
-            'tecnologia': ['1618366712010-f4ae9c647dcb', '1505740420928-5e560c06d30e', '1546435770-a3e426bf472b', '1528032733973-2e061806cc26'],
-            'herramienta': ['1530124566582-a618bc2615dc', '1586864387967-d02ef85d93e8', '1504148455328-c376907d081c'],
-            'paraguas': ['1518331539958-472e3895315d', '1554559591-1fb894fec92c'],
-            'llavero': ['1584916201218-f4242ceb4809', '1516997121675-4c2d1684aa3e'],
-            'default': ['1582201942988-13e60cb25f54', '1605810230434-7631ac76ec81', '1497032628192-86f99bcd76bc']
-        };
-
-        // Función para asignar imágenes dinámicamente según el nombre del producto
-        function getImageUrl(name, ref) {
-            const lowerName = name.toLowerCase();
-            let pool = imagePools['default'];
+        // Función que asigna el ícono vectorial perfecto basándose en el nombre del producto
+        function getIconSVG(name) {
+            const n = name.toLowerCase();
             
-            if(lowerName.includes('bolígrafo') || lowerName.includes('esfero') || lowerName.includes('resaltador')) pool = imagePools['boligrafo'];
-            else if(lowerName.includes('libreta') || lowerName.includes('agenda') || lowerName.includes('cuaderno') || lowerName.includes('memo')) pool = imagePools['libreta'];
-            else if(lowerName.includes('botella') || lowerName.includes('cilindro')) pool = imagePools['botella'];
-            else if(lowerName.includes('termo') || lowerName.includes('taza') || lowerName.includes('vaso') || lowerName.includes('mug')) pool = imagePools['taza'];
-            else if(lowerName.includes('mochila') || lowerName.includes('morral')) pool = imagePools['mochila'];
-            else if(lowerName.includes('bolsa') || lowerName.includes('lonchera') || lowerName.includes('canguro')) pool = imagePools['bolso'];
-            else if(lowerName.includes('audífono') || lowerName.includes('altavoz') || lowerName.includes('bocina') || lowerName.includes('powerbank') || lowerName.includes('soporte') || lowerName.includes('cargador')) pool = imagePools['tecnologia'];
-            else if(lowerName.includes('herramienta') || lowerName.includes('linterna') || lowerName.includes('calibrador') || lowerName.includes('cinta')) pool = imagePools['herramienta'];
-            else if(lowerName.includes('paraguas') || lowerName.includes('sombrilla') || lowerName.includes('impermeable')) pool = imagePools['paraguas'];
-            else if(lowerName.includes('llavero') || lowerName.includes('destapador')) pool = imagePools['llavero'];
-
-            // Selección determinista (siempre muestra la misma foto para el mismo producto)
-            let hash = 0;
-            for (let i = 0; i < ref.length; i++) hash = ref.charCodeAt(i) + ((hash << 5) - hash);
-            const index = Math.abs(hash) % pool.length;
-            return `https://images.unsplash.com/photo-${pool[index]}?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80`;
+            // Bolígrafos, lápices, resaltadores
+            if(n.includes('bolígrafo') || n.includes('resaltador') || n.includes('lápiz') || n.includes('marcador')) {
+                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>`;
+            }
+            // Libretas, agendas, notas
+            if(n.includes('libreta') || n.includes('agenda') || n.includes('cuaderno') || n.includes('memo') || n.includes('tablero')) {
+                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>`;
+            }
+            // Termos, botellas, tazas, licoreras
+            if(n.includes('termo') || n.includes('botella') || n.includes('vaso') || n.includes('mug') || n.includes('cilindro') || n.includes('taza') || n.includes('licorera')) {
+                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 8h-3V4H3c-.6 0-1 .4-1 1v14c0 .6.4 1 1 1h14c.6 0 1-.4 1-1v-4h2c.6 0 1-.4 1-1v-5c0-.6-.4-1-1-1zm-3 10H4V6h13v12zm1-8h2v4h-2v-4z"></path></svg>`;
+            }
+            // Mochilas, bolsas, loncheras
+            if(n.includes('mochila') || n.includes('morral') || n.includes('bolsa') || n.includes('lonchera') || n.includes('canguro') || n.includes('cartera')) {
+                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 10V8a2 2 0 00-2-2h-3.5a5.5 5.5 0 00-11 0H3a2 2 0 00-2 2v2m20 0v10a2 2 0 01-2 2H5a2 2 0 01-2-2V10m20 0h-3.5m-11 0H3m4-4a3.5 3.5 0 117 0"></path></svg>`;
+            }
+            // Tecnología
+            if(n.includes('audífono') || n.includes('altavoz') || n.includes('bocina') || n.includes('teclado') || n.includes('mouse') || n.includes('powerbank') || n.includes('cargador') || n.includes('reloj') || n.includes('soporte')) {
+                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>`;
+            }
+            // Herramientas, cintas métricas, calibradores
+            if(n.includes('herramient') || n.includes('cinta') || n.includes('calibrador') || n.includes('desarmador')) {
+                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>`;
+            }
+            // Llaveros, destapadores
+            if(n.includes('llavero') || n.includes('destapador')) {
+                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path></svg>`;
+            }
+            // Paraguas, impermeables
+            if(n.includes('paraguas') || n.includes('sombrilla') || n.includes('impermeable')) {
+                return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12a9 9 0 1118 0M3 12h18M12 12v7m0 0a2 2 0 002 2m-2-2a2 2 0 01-2 2"></path></svg>`;
+            }
+            // Por defecto: un paquete o regalo
+            return `<svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>`;
         }
 
-        // Base de Datos de los +130 Productos
+        // Base de Datos Extensa (+130 Productos del PDF)
         const rawProducts = [
             ["AGCSI 027", "Agenda Semanal Clasica", "Incluye caja individual, separador y bolígrafo.", "Oficina"],
             ["OF0677", "Set Ejecutivo Luxe", "Set en caja de papel con dos niveles magnéticos.", "Oficina"],
@@ -593,41 +596,47 @@
         const noResults = document.getElementById('no-results');
         let currentFilter = 'Todos';
         let currentSearch = '';
+        let filteredProductsCache = []; // Caché para referenciar el modal
 
         function renderProducts() {
             grid.innerHTML = '';
             
-            const filtered = products.filter(p => {
+            filteredProductsCache = products.filter(p => {
                 const matchCategory = currentFilter === 'Todos' || p.cat === currentFilter;
                 const matchSearch = p.name.toLowerCase().includes(currentSearch.toLowerCase()) || p.ref.toLowerCase().includes(currentSearch.toLowerCase());
                 return matchCategory && matchSearch;
             });
 
-            if (filtered.length === 0) {
+            if (filteredProductsCache.length === 0) {
                 noResults.classList.remove('hidden');
             } else {
                 noResults.classList.add('hidden');
                 
                 let htmlContent = '';
-                filtered.forEach(p => {
-                    const imgUrl = getImageUrl(p.name, p.ref);
-                    const safeName = p.name.replace(/'/g, "\\'");
-                    const safeDesc = p.desc.replace(/'/g, "\\'");
+                filteredProductsCache.forEach((p, index) => {
+                    const iconSVG = getIconSVG(p.name);
                     
                     htmlContent += `
-                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 group flex flex-col hover:-translate-y-1 cursor-pointer" onclick="openModal('${safeName}', '${p.ref}', '${safeDesc}', '${imgUrl}')">
-                        <div class="h-40 sm:h-48 overflow-hidden relative bg-slate-100 flex items-center justify-center">
-                            <img src="${imgUrl}" alt="${p.name}" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 group-hover:opacity-90 transition-all duration-500">
-                            <!-- Overlay de Ampliar al pasar el cursor -->
+                    <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 group flex flex-col hover:-translate-y-1 cursor-pointer" onclick="openModal(${index})">
+                        <!-- Mockup Gráfico Dinámico -->
+                        <div class="h-40 sm:h-48 relative bg-gradient-to-br from-slate-800 to-slate-900 flex flex-col items-center justify-center p-4 text-center group-hover:from-slate-700 group-hover:to-slate-800 transition-all duration-300">
+                            <div class="text-[#FF6600] mb-2 opacity-90 group-hover:scale-110 transition-transform duration-300">
+                                ${iconSVG}
+                            </div>
+                            <h3 class="text-white font-bold text-sm sm:text-base leading-tight line-clamp-2 px-2">${p.name}</h3>
+                            <div class="absolute top-2 left-2 bg-[#FF6600] text-white text-[10px] font-bold px-2 py-0.5 rounded shadow-sm">Ref: ${p.ref}</div>
+                            <div class="absolute bottom-2 right-2 opacity-10 text-white font-black text-xl">PyJ</div>
+                            
+                            <!-- Overlay de Ampliar -->
                             <div class="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                <div class="bg-white/90 p-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                                    <svg class="w-6 h-6 text-[#FF6600]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
+                                <div class="bg-white/90 p-3 rounded-full transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl">
+                                    <svg class="w-6 h-6 text-[#FF6600]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path></svg>
                                 </div>
                             </div>
                         </div>
-                        <div class="p-4 flex flex-col flex-grow text-center">
-                            <span class="text-[#FF6600] text-[10px] font-bold tracking-wider uppercase mb-1">${p.ref}</span>
-                            <h3 class="font-bold text-slate-800 text-sm leading-tight group-hover:text-[#FF6600] transition-colors">${p.name}</h3>
+                        <div class="p-4 flex flex-col flex-grow text-center bg-white z-10">
+                            <span class="text-[#FF6600] text-[10px] font-bold tracking-wider uppercase mb-1">${p.cat}</span>
+                            <p class="text-xs text-gray-500 line-clamp-2 mt-1 px-1">${p.desc}</p>
                         </div>
                     </div>`;
                 });
@@ -635,7 +644,6 @@
             }
         }
 
-        // Lógica de Buscador y Filtros
         function searchProducts() { currentSearch = document.getElementById('searchInput').value; renderProducts(); }
 
         function filterCategory(category) {
@@ -653,15 +661,28 @@
             renderProducts();
         }
 
-        // Lógica del Lightbox (Ventana Modal)
-        function openModal(name, ref, desc, imgUrl) {
+        // Lógica del Lightbox (Ventana Modal Dinámica)
+        function openModal(index) {
+            const p = filteredProductsCache[index];
             const modal = document.getElementById('lightbox');
-            document.getElementById('modal-img').src = imgUrl;
-            document.getElementById('modal-title').innerText = name;
-            document.getElementById('modal-ref').innerText = 'Referencia: ' + ref;
-            document.getElementById('modal-desc').innerText = desc;
+            const iconSVG = getIconSVG(p.name);
             
-            const message = `Hola, vengo de la galería web y quiero cotizar el producto: ${name} (Ref: ${ref}).`;
+            // Inyectar el mockup ampliado en la ventana emergente
+            document.getElementById('modal-image-container').innerHTML = `
+                <div class="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900 flex flex-col items-center justify-center p-8 text-center relative shadow-inner">
+                    <div class="text-[#FF6600] mb-6 opacity-90 transform scale-150 drop-shadow-md">
+                        ${iconSVG}
+                    </div>
+                    <h3 class="text-white font-extrabold text-2xl md:text-3xl leading-tight px-4 z-10 drop-shadow-md">${p.name}</h3>
+                    <div class="absolute bottom-4 right-4 opacity-10 text-white font-black text-6xl">PyJ</div>
+                </div>
+            `;
+            
+            document.getElementById('modal-title').innerText = p.name;
+            document.getElementById('modal-ref').innerText = 'Referencia: ' + p.ref;
+            document.getElementById('modal-desc').innerText = p.desc;
+            
+            const message = `Hola, vengo del catálogo web y quiero cotizar el producto: ${p.name} (Ref: ${p.ref}).`;
             document.getElementById('modal-wa').href = `https://wa.me/573202814844?text=${encodeURIComponent(message)}`;
             
             modal.classList.remove('hidden');
